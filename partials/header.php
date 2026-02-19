@@ -65,7 +65,7 @@
             <div class="auto-container">
 				<div class="inner-container d-flex">
 					<!-- Logo Box -->
-					<div class="logo"><a href="index.html"><img src="<?= $base_url ?>/images/Img-pymento/logo-test.png" alt="" title=""></a></div>
+					<div class="logo"><a href="index.html"><img src="<?= $base_url ?>/images/img-pymento/logo-test.png" alt="" title=""></a></div>
 					
 					<!-- Upper Right -->
 					<div class="upper-right">
@@ -131,7 +131,7 @@
 				<div class="d-flex justify-content-between align-items-center">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.html" title=""><img src="<?= $base_url ?>/images/Img-pymento/logo-test.png" alt="" title=""></a>
+						<a href="index.html" title=""><img src="<?= $base_url ?>/images/img-pymento/logo-test.png" alt="" title=""></a>
 					</div>
 					
 					<!-- Right Col -->
@@ -168,7 +168,7 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><span class="icon flaticon-020-x-mark"></span></div>
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.php"><img src="<?= $base_url ?>/images/Img-pymento/logo.webp" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.php"><img src="<?= $base_url ?>/images/img-pymento/logo.webp" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
             </nav>
         </div>

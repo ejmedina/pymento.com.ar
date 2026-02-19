@@ -180,8 +180,8 @@ include __DIR__ . '/../partials/header.php';
 				<div class="clients-one_carousel-column col-lg-8 col-md-12 col-sm-12">
 					<!-- Sponsors Carousel -->
 					<ul class="sponsors-carousel-two owl-carousel owl-theme">
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/Img-pymento/logo-plusrasgo.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/Img-pymento/logo_cooperativa.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-plusrasgo.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo_cooperativa.png" alt=""></a></figure></li>
 						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/7.png" alt=""></a></figure></li>
 						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/8.png" alt=""></a></figure></li>
 						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/5.png" alt=""></a></figure></li>
@@ -204,7 +204,7 @@ include __DIR__ . '/../partials/header.php';
 				<div class="about-two_image-column col-lg-6 col-md-12 col-sm-12">
 					<div class="about-two_pattern-one" style="background-image:url(<?= $base_url ?>/images/background/pattern-12.png)"></div>
 					<div class="about-two_image">
-						<img src="<?= $base_url ?>/images/Img-pymento/about.webp" alt="" />
+						<img src="<?= $base_url ?>/images/img-pymento/about.webp" alt="" />
 					</div>
 				</div>
 				
