@@ -1,0 +1,50 @@
+/* Quitamos la capitalización automática del template 
+    global fuerte: headings, botones, links, etc. */
+h1, h2, h3, h4, h5, h6,
+p, a, button, span, li,
+.sec-title_two-heading,
+.btn-style-one, .btn-style-two, .btn-style-three,
+.theme-btn,
+.main-header .navigation > li > a {
+    text-transform: none !important;
+}
+
+
+
+/* Activamos el gradiente vertical en el fondo del logo */
+.header-style-two .logo:before{
+    background-image: linear-gradient(to bottom, #7114EF, #1475F7) !important;
+}
+
+
+:root{
+  /* Elegimos 2 colores base del gradiente */
+    --py-start: #7114EF;
+    --py-end:   #1475F7;
+
+    /* Usamos las variantes que usa el template */
+    --color-thirtythree: var(--py-start);
+    --color-thirtytwo:   var(--py-end);
+
+    /* Colores “solid” que usa en hover/active */
+    --main-color: var(--py-end);
+
+    --py-gradient: linear-gradient(to top left, var(--py-start) 0%, var(--py-end) 100%);
+}
+
+
+/* SERVICE DETAIL */
+
+/* Sidebar con colores y gradiente */
+.cat-list li a:hover,
+.cat-list li.active a{
+    color: var(--white-color);
+    background-color: var(--main-color);         /* fallback */
+    background-image: var(--py-gradient);        /* el gradiente “oficial” */
+    border-color: var(--main-color);
+}
+
+
+.contact-widget .help {
+    line-height: 1.1;
+}
