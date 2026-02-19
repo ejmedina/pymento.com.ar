@@ -236,7 +236,7 @@ include __DIR__ . '/../partials/header.php';
 
 							<!-- Contact Widget -->
 							<div class="sidebar-widget contact-widget">
-								<div class="widget-content" style="background-image:url(<?= $base_url ?>/images/Img-pymento/service-contact.jpg)">
+								<div class="widget-content" style="background-image:url(<?= $base_url ?>/images/img-pymento/service-contact.jpg)">
 									<div class="title">Contactanos ahora</div>
 									<div class="help">Cualquier Consulta!</div>
 									<a class="phone" href="tel:+557-3452-234">557-3452-234</a>
