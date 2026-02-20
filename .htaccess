@@ -1,15 +1,17 @@
+Options -MultiViews
 RewriteEngine On
+RewriteBase /pymento/
 
-# Si el archivo o carpeta existe, no tocar
+# 1) Home
+RewriteRule ^$ pages/index.php [L]
+
+# 2) Servicios bonitos -> PHP runtime
+RewriteRule ^servicios/([a-z0-9_-]+)/?$ pages/service-detail.php?service=$1 [L,QSA]
+
+# 3) (opcional) Contacto bonito
+RewriteRule ^contacto/?$ pages/contact.php [L]
+
+# 4) Si el archivo o carpeta existe, no tocar
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
-
-# Home
-RewriteRule ^$ pages/index.php [L]
-
-# Servicios bonitos -> PHP runtime
-RewriteRule ^servicios/([a-z0-9_-]+)/?$ pages/service-detail.php?service=$1 [L,QSA]
-
-# (opcional) Contacto bonito
-RewriteRule ^contacto/?$ pages/contact.php [L]

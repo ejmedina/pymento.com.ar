@@ -14,8 +14,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="<?= $base_url ?>/images/img-pymento/favicon-256.png" type="image/x-icon">
+	<link rel="icon" href="<?= $base_url ?>/images/img-pymento/favicon-256.png" type="image/x-icon">
 
 	<!-- Responsive -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,7 +65,14 @@
             <div class="auto-container">
 				<div class="inner-container d-flex">
 					<!-- Logo Box -->
-					<div class="logo"><a href="index.html"><img src="<?= $base_url ?>/images/img-pymento/logo-test.png" alt="" title=""></a></div>
+					<?php
+						$home_href = ($base_url ?: '') . '/';
+					?>
+					<div class="logo">
+						<a href="<?= htmlspecialchars($home_href) ?>">
+							<img src="<?= htmlspecialchars($base_url) ?>/images/img-pymento/logo.png" alt="" title="">
+						</a>
+					</div>
 					
 					<!-- Upper Right -->
 					<div class="upper-right">
@@ -83,7 +90,14 @@
 								
 								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 									<ul class="navigation clearfix">
-										<li><a href="<?= ($nav_variant === "home") ? "#about" : ($base_url . "/#about") ?>">Nosotros</a></li>
+										<?php
+											$is_home = ($nav_variant === "home");
+											$href = $is_home ? "#about" : ($base_url . "/#about");
+											$text = $is_home ? 'Nosotros' : 'Inicio';
+										?>
+										<li>
+											<a href="<?= $href ?>"><?= $text ?></a>
+										</li>
 										<li class="dropdown"><a href="#">Servicios</a>
 											<ul>
 												<li><a href="<?= $base_url ?>/servicios/marketing/" target="_blank">Marketing y Adquisición</a></li>
@@ -130,8 +144,13 @@
             <div class="auto-container">
 				<div class="d-flex justify-content-between align-items-center">
 					<!-- Logo -->
+					<?php
+						$home_href = ($base_url ?: '') . '/';
+					?>
 					<div class="logo">
-						<a href="index.html" title=""><img src="<?= $base_url ?>/images/img-pymento/logo-test.png" alt="" title=""></a>
+						<a href="<?= htmlspecialchars($home_href) ?>">
+							<img src="<?= htmlspecialchars($base_url) ?>/images/img-pymento/logo.png" alt="" title="">
+						</a>
 					</div>
 					
 					<!-- Right Col -->
@@ -168,7 +187,7 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><span class="icon flaticon-020-x-mark"></span></div>
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.php"><img src="<?= $base_url ?>/images/img-pymento/logo.webp" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="<?= $base_url ?>/index.php"><img src="<?= $base_url ?>/images/img-pymento/logo-contorno.webp" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
             </nav>
         </div>

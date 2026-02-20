@@ -11,7 +11,7 @@
 						<div class="footer-widget logo-widget">
 							<div class="logo">
 								<a href="index.html">
-									<img src="<?= $base_url ?>/images/img-pymento/logo-test.png" alt="Pymento" />
+									<img src="<?= $base_url ?>/images/img-pymento/logo.png" alt="Pymento" />
 								</a>
 							</div>
 
