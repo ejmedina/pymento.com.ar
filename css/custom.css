@@ -33,7 +33,17 @@ p, a, button, span, li,
 }
 
 
+/* Index: TESTIMONIAL */
+.testimonial-section {
+    background-size: contain;
+}
+
 /* SERVICE DETAIL */
+
+/* Imagen de fondo HERO */
+.page-title {
+    background-position: center 40%;
+}
 
 /* Sidebar con colores y gradiente */
 .cat-list li a:hover,

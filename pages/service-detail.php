@@ -6,7 +6,7 @@ $services = [
 		"title" => "Marketing y Adquisición",
 		"page_title" => "Servicios | Marketing y Adquisición",
 		"hero" => [
-		"image" => $base_url . "/images/resource/service-10.jpg",
+		"image" => $base_url . "/images/img-pymento/service-marketing-1.webp",
 		"excerpt" => "Estrategia, campañas y optimización para atraer clientes y convertir mejor.",
 		"paragraphs" => [
 			"Definimos tu propuesta de valor, el mensaje y el canal correcto para llegar al público ideal.",
@@ -26,7 +26,7 @@ $services = [
 		],
 		],
 		"mid" => [
-		"image" => $base_url . "/images/resource/service-11.jpg",
+		"image" => $base_url . "/images/img-pymento/service-marketing-2.webp",
 		"heading" => "Campañas que generan demanda",
 		"text" => "Planificamos y ejecutamos acciones alineadas a tu negocio para generar crecimiento sostenido."
 		],
@@ -41,7 +41,7 @@ $services = [
 		"title" => "Consultoría en negocios",
 		"page_title" => "Servicios | Consultoría en negocios",
 		"hero" => [
-		"image" => $base_url . "/images/resource/service-10.jpg",
+		"image" => $base_url . "/images/img-pymento/service-consultoria-1.webp",
 		"excerpt" => "Diagnóstico y planificación para ordenar procesos y acelerar resultados.",
 		"paragraphs" => [
 			"Analizamos tu operación, detectamos cuellos de botella y priorizamos acciones de alto impacto.",
@@ -61,7 +61,7 @@ $services = [
 		],
 		],
 		"mid" => [
-		"image" => $base_url . "/images/resource/service-11.jpg",
+		"image" => $base_url . "/images/img-pymento/service-consultoria-2.webp",
 		"heading" => "Decisiones basadas en datos",
 		"text" => "Definimos KPIs, armamos tableros y te ayudamos a medir para decidir mejor."
 		],
@@ -76,7 +76,7 @@ $services = [
 		"title" => "Desarrollos y soluciones",
 		"page_title" => "Servicios | Desarrollos y soluciones",
 		"hero" => [
-		"image" => $base_url . "/images/resource/service-10.jpg",
+		"image" => $base_url . "/images/img-pymento/service-desarrollo-1.webp",
 		"excerpt" => "Software a medida, automatizaciones e integraciones pensadas para tu operación.",
 		"paragraphs" => [
 			"Construimos soluciones que se adaptan a tu flujo de trabajo, no al revés.",
@@ -96,7 +96,7 @@ $services = [
 		],
 		],
 		"mid" => [
-		"image" => $base_url . "/images/resource/service-11.jpg",
+		"image" => $base_url . "/images/img-pymento/service-desarrollo-2.webp",
 		"heading" => "De la idea a producción",
 		"text" => "Prototipamos rápido, validamos con vos y entregamos iterando con calidad."
 		],
@@ -111,7 +111,7 @@ $services = [
 		"title" => "IA aplicada a soporte/ventas",
 		"page_title" => "Servicios | IA aplicada a soporte y ventas",
 		"hero" => [
-		"image" => $base_url . "/images/resource/service-10.jpg",
+		"image" => $base_url . "/images/img-pymento/service-ia-1.webp",
 		"excerpt" => "Asistentes y automatizaciones con IA para escalar atención y ventas.",
 		"paragraphs" => [
 			"Implementamos flujos para responder más rápido, calificar consultas y liberar tiempo del equipo.",
@@ -131,7 +131,7 @@ $services = [
 		],
 		],
 		"mid" => [
-		"image" => $base_url . "/images/resource/service-11.jpg",
+		"image" => $base_url . "/images/img-pymento/service-ia-2.webp",
 		"heading" => "Automatización con control",
 		"text" => "Definimos límites, aprobaciones y métricas para que la IA sume sin sorpresas."
 		],
@@ -146,7 +146,7 @@ $services = [
 		"title" => "Content Factory",
 		"page_title" => "Servicios | Content Factory",
 		"hero" => [
-		"image" => $base_url . "/images/resource/service-10.jpg",
+		"image" => $base_url . "/images/img-pymento/service-content-1.webp",
 		"excerpt" => "Contenido y piezas listas para comunicar mejor y vender más.",
 		"paragraphs" => [
 			"Creamos contenido alineado a tu marca y a tus objetivos (captación, confianza y conversión).",
@@ -166,7 +166,7 @@ $services = [
 		],
 		],
 		"mid" => [
-		"image" => $base_url . "/images/resource/service-11.jpg",
+		"image" => $base_url . "/images/img-pymento/service-content-2.webp",
 		"heading" => "Coherencia y calidad",
 		"text" => "Mantenemos una línea clara de marca para que todo lo que publiques sume."
 		],
@@ -201,7 +201,7 @@ include __DIR__ . '/../partials/header.php';
 ?>
 
 		<!-- Page Title -->
-		<section class="page-title" style="background-image:url(<?= $base_url ?>/images/background/7.jpg)">
+		<section class="page-title" style="background-image:url(<?= $base_url ?>/images/img-pymento/service-hero-2.jpeg)">
 			<div class="auto-container">
 				<h2><?= htmlspecialchars($services[$service_key]["title"]) ?></h2>
 					<ul class="bread-crumb clearfix">
@@ -237,7 +237,7 @@ include __DIR__ . '/../partials/header.php';
 							<!-- Contact Widget -->
 							<div class="sidebar-widget contact-widget">
 								<div class="widget-content" style="background-image:url(<?= $base_url ?>/images/img-pymento/service-contact.jpg)">
-									<div class="title">Contactanos ahora</div>
+									<div class="title">Contactanos ahora por</div>
 									<div class="help">Cualquier Consulta!</div>
 									<a class="phone" href="tel:+557-3452-234">557-3452-234</a>
 									<div class="form">O podes llenar el form y nos pondremos en contacto:</div>

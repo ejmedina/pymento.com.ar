@@ -14,7 +14,7 @@ include __DIR__ . '/../partials/header.php';
 			
 			<!-- Slide -->
 			<div class="slide">
-				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/2.jpg)"></div>
+				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-tecnologia.jpg)"></div>
 				<div class="slider-two_pattern-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/pattern-1.png)"></div>
 				<div class="auto-container">
 					
@@ -41,7 +41,7 @@ include __DIR__ . '/../partials/header.php';
 			
 			<!-- Slide -->
 			<div class="slide">
-				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/2.jpg)"></div>
+				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-marketing.jpeg)"></div>
 				<div class="slider-two_pattern-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/pattern-1.png)"></div>
 				<div class="auto-container">
 					
@@ -68,7 +68,7 @@ include __DIR__ . '/../partials/header.php';
 			
 			<!-- Slide -->
 			<div class="slide">
-				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/2.jpg)"></div>
+				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-ia.webp)"></div>
 				<div class="slider-two_pattern-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/pattern-1.png)"></div>
 				<div class="auto-container">
 					
@@ -76,7 +76,7 @@ include __DIR__ . '/../partials/header.php';
 					<div class="slider-two-content">
 						<div class="slider-two_inner">
 							<div class="slider-two_title">IA aplicada</div>
-							<h1 class="slider-two_heading">Redes sociales <br> atención al cliente y ventas</h1>
+							<h1 class="slider-two_heading">Redes sociales, <br> atención al cliente y ventas</h1>
 							<div class="slider-two_text">Te ayudamos a implementar las soluciones de IA más avanzadas <br> para que tu negocio floresca mientras tus costos disminuyen</div>
 							<!-- Button Box -->
 							<div class="slider-two_button-box">
@@ -169,7 +169,7 @@ include __DIR__ . '/../partials/header.php';
 	
 	<!-- Clients One -->
 	<section class="clients-one">
-		<div class="clients-one_pattern" style="background-image:url(<?= $base_url ?>/images/background/3.jpg)"></div>
+		<div class="clients-one_pattern" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-tecnologia.jpg)"></div>
 		<div class="auto-container">
 			<div class="row clearfix">
 				<!-- Title Column -->
@@ -405,7 +405,7 @@ include __DIR__ . '/../partials/header.php';
 	<!-- End Services -->
 
 	<!-- Testimonial Section -->
-	<section id="testimonial" class="testimonial-section" style="background-image: url(<?= $base_url ?>/images/background/5.jpg)">
+	<section id="testimonial" class="testimonial-section" style="background-image: url(<?= $base_url ?>/images/img-pymento/testimonial-bg.webp)">
 		<div class="pattern-layer-one" style="background-image: url(<?= $base_url ?>/images/background/pattern-25.png)"></div>
 		<div class="auto-container">
 			<div class="row clearfix">
