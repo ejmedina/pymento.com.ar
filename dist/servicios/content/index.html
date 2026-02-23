@@ -92,11 +92,11 @@
 										</li>
 										<li class="dropdown"><a href="#">Servicios</a>
 											<ul>
-												<li><a href="/servicios/marketing/" target="_blank">Marketing y Adquisición</a></li>
-												<li><a href="/servicios/consultoria/" target="_blank">Consultoría en negocios</a></li>
-												<li><a href="/servicios/desarrollo/" target="_blank">Desarrollos y soluciones</a></li>
-												<li><a href="/servicios/ia/" target="_blank">IA aplicada a soporte/ventas</a></li>
-												<li><a href="/servicios/content/" target="_blank">Content Factory</a></li>
+												<li><a href="/servicios/marketing/">Marketing y Adquisición</a></li>
+												<li><a href="/servicios/consultoria/">Consultoría en negocios</a></li>
+												<li><a href="/servicios/desarrollo/">Desarrollos y soluciones</a></li>
+												<li><a href="/servicios/ia/">IA aplicada a soporte/ventas</a></li>
+												<li><a href="/servicios/content/">Content Factory</a></li>
 											</ul>
 										</li>
 																				<li><a href="/contact.php/">Contacto</a></li>
@@ -246,89 +246,231 @@
 
 					<!-- Content Side -->
 					<div class="content-side right-sidebar col-lg-8 col-md-12 col-sm-12">
-						<div class="service-detail">
+						<div class="service-detail is-content-factory">
 							<div class="inner-box">
-								<div class="image">
-									<img src="/images/img-pymento/service-content-1.webp" alt="" />
-								</div>
+																	<!-- (B) Layout especial Content Factory -->
+									<h3>Content Factory</h3>
+									<p>Videos realistas para campañas usando modelos generados con IA.</p>
 
-								<h3>Content Factory</h3>
-
-								<p>Contenido y piezas listas para comunicar mejor y vender más.</p>
-
-																											<p>Creamos contenido alineado a tu marca y a tus objetivos (captación, confianza y conversión).</p>
-																			<p>Planificamos, producimos y optimizamos para sostener presencia con coherencia.</p>
-																	
-
-								<div class="row clearfix">
-																			<div class="feature-two col-lg-6 col-md-6 col-sm-12">
-											<div class="feature-two_inner">
-												<div class="feature-two_content">
-													<span class="feature-two_icon">
-														<img src="/images/icons/feature-6.png" alt="" />
-													</span>
-													<h5 class="feature-two_heading">Estrategia de contenidos</h5>
-													<div class="feature-two_text">Calendario, formatos y mensajes para cada etapa del embudo.</div>
-												</div>
-											</div>
-										</div>
-																			<div class="feature-two col-lg-6 col-md-6 col-sm-12">
-											<div class="feature-two_inner">
-												<div class="feature-two_content">
-													<span class="feature-two_icon">
-														<img src="/images/icons/feature-7.png" alt="" />
-													</span>
-													<h5 class="feature-two_heading">Producción constante</h5>
-													<div class="feature-two_text">Piezas listas para publicar: textos, creatividades y variantes.</div>
-												</div>
-											</div>
-										</div>
-																	</div>
-
-
-								<div class="row clearfix">
-									<div class="column col-lg-6 col-md-6 col-sm-12">
-										<div class="image">
-											<img src="/images/img-pymento/service-content-2.webp" alt="" />
-										</div>
+																			<p>Creamos piezas para marketing online con modelos humanos generados con IA: realistas, consistentes y listos para escalar.</p>
+																			<p>Esto reduce costos y tiempos de jornadas de filmación, sin perder calidad visual.</p>
+																			<p>Ofrecemos distintos modelos y paquetes de videos según tu marca, producto o servicio.</p>
+									
+									<!-- Divider + título sección -->
+									<div class="content-works-divider content-works-divider--pill">
+										<h4 class="content-works-pill">Trabajos realizados</h4>
 									</div>
 
-									<div class="column col-lg-6 col-md-6 col-sm-12">
-										<h4>Coherencia y calidad</h4>
-										<p>Mantenemos una línea clara de marca para que todo lo que publiques sume.</p>
+									<!-- Slider videos estilo teléfono -->
+									<div class="content-video-slider-wrapper">
+										<div class="content-video-slider owl-carousel owl-theme">
+																							<div class="content-video-slide" data-pos="0">
+												
+													<div class="phone">
+														<video
+															class="phone__video"
+															playsinline
+															preload="none"
+															disablepictureinpicture
+															controlslist="nofullscreen noremoteplayback nodownload"
+															poster="/images/img-pymento/video-poster-1.webp"
+															data-src="/videos/demo-1.mp4"
+														></video>
+
+														<!-- overlay play (solo cuando está pausado) -->
+														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
+															<span class="phone__play"></span>
+														</button>
+
+														<!-- barra de progreso custom -->
+														<div class="phone__progress" aria-label="Progreso del video">
+															<input class="phone__seek" type="range" min="0" max="1000" value="0" step="1">
+															<div class="phone__time">
+																<span class="phone__tcur">0:00</span>
+																<span class="phone__tsep">/</span>
+																<span class="phone__tdur">0:00</span>
+															</div>
+														</div>
+													</div>
+
+																											<h4>Cliente: Autoelevadores DG</h4>
+													
+																											<div class="video-desc">Campaña de adquisición de clientes</div>
+													
+												</div>
+																							<div class="content-video-slide" data-pos="1">
+												
+													<div class="phone">
+														<video
+															class="phone__video"
+															playsinline
+															preload="none"
+															disablepictureinpicture
+															controlslist="nofullscreen noremoteplayback nodownload"
+															poster="/images/img-pymento/video-poster-2.jpg"
+															data-src="/videos/demo-2.mp4"
+														></video>
+
+														<!-- overlay play (solo cuando está pausado) -->
+														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
+															<span class="phone__play"></span>
+														</button>
+
+														<!-- barra de progreso custom -->
+														<div class="phone__progress" aria-label="Progreso del video">
+															<input class="phone__seek" type="range" min="0" max="1000" value="0" step="1">
+															<div class="phone__time">
+																<span class="phone__tcur">0:00</span>
+																<span class="phone__tsep">/</span>
+																<span class="phone__tdur">0:00</span>
+															</div>
+														</div>
+													</div>
+
+																											<h4>Cliente: Cooperativa 2001</h4>
+													
+																											<div class="video-desc">Campaña de adquisición de clientes</div>
+													
+												</div>
+																							<div class="content-video-slide" data-pos="2">
+												
+													<div class="phone">
+														<video
+															class="phone__video"
+															playsinline
+															preload="none"
+															disablepictureinpicture
+															controlslist="nofullscreen noremoteplayback nodownload"
+															poster="/images/img-pymento/video-poster-3.webp"
+															data-src="/videos/demo-3.mp4"
+														></video>
+
+														<!-- overlay play (solo cuando está pausado) -->
+														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
+															<span class="phone__play"></span>
+														</button>
+
+														<!-- barra de progreso custom -->
+														<div class="phone__progress" aria-label="Progreso del video">
+															<input class="phone__seek" type="range" min="0" max="1000" value="0" step="1">
+															<div class="phone__time">
+																<span class="phone__tcur">0:00</span>
+																<span class="phone__tsep">/</span>
+																<span class="phone__tdur">0:00</span>
+															</div>
+														</div>
+													</div>
+
+																											<h4>Cliente: Cooperativa 2001</h4>
+													
+																											<div class="video-desc">Campaña de adquisición de clientes</div>
+													
+												</div>
+																							<div class="content-video-slide" data-pos="3">
+												
+													<div class="phone">
+														<video
+															class="phone__video"
+															playsinline
+															preload="none"
+															disablepictureinpicture
+															controlslist="nofullscreen noremoteplayback nodownload"
+															poster="/images/img-pymento/video-poster-4.webp"
+															data-src="/videos/demo-4.mp4"
+														></video>
+
+														<!-- overlay play (solo cuando está pausado) -->
+														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
+															<span class="phone__play"></span>
+														</button>
+
+														<!-- barra de progreso custom -->
+														<div class="phone__progress" aria-label="Progreso del video">
+															<input class="phone__seek" type="range" min="0" max="1000" value="0" step="1">
+															<div class="phone__time">
+																<span class="phone__tcur">0:00</span>
+																<span class="phone__tsep">/</span>
+																<span class="phone__tdur">0:00</span>
+															</div>
+														</div>
+													</div>
+
+																											<h4>Cliente: Cooperativa 2001</h4>
+													
+																											<div class="video-desc">Campaña de adquisición de clientes</div>
+													
+												</div>
+																							<div class="content-video-slide" data-pos="4">
+												
+													<div class="phone">
+														<video
+															class="phone__video"
+															playsinline
+															preload="none"
+															disablepictureinpicture
+															controlslist="nofullscreen noremoteplayback nodownload"
+															poster="/images/img-pymento/video-poster-5.webp"
+															data-src="/videos/demo-5.mp4"
+														></video>
+
+														<!-- overlay play (solo cuando está pausado) -->
+														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
+															<span class="phone__play"></span>
+														</button>
+
+														<!-- barra de progreso custom -->
+														<div class="phone__progress" aria-label="Progreso del video">
+															<input class="phone__seek" type="range" min="0" max="1000" value="0" step="1">
+															<div class="phone__time">
+																<span class="phone__tcur">0:00</span>
+																<span class="phone__tsep">/</span>
+																<span class="phone__tdur">0:00</span>
+															</div>
+														</div>
+													</div>
+
+																											<h4>Cliente: PGI Argentina</h4>
+													
+																											<div class="video-desc">Campaña de adquisición de clientes</div>
+													
+												</div>
+																							<div class="content-video-slide" data-pos="5">
+												
+													<div class="phone">
+														<video
+															class="phone__video"
+															playsinline
+															preload="none"
+															disablepictureinpicture
+															controlslist="nofullscreen noremoteplayback nodownload"
+															poster="/images/img-pymento/video-poster-6.webp"
+															data-src="/videos/demo-6.mp4"
+														></video>
+
+														<!-- overlay play (solo cuando está pausado) -->
+														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
+															<span class="phone__play"></span>
+														</button>
+
+														<!-- barra de progreso custom -->
+														<div class="phone__progress" aria-label="Progreso del video">
+															<input class="phone__seek" type="range" min="0" max="1000" value="0" step="1">
+															<div class="phone__time">
+																<span class="phone__tcur">0:00</span>
+																<span class="phone__tsep">/</span>
+																<span class="phone__tdur">0:00</span>
+															</div>
+														</div>
+													</div>
+
+																											<h4>Cliente: Ahorro Inteligente</h4>
+													
+																											<div class="video-desc">Campaña de adquisición de clientes</div>
+													
+												</div>
+																					</div>
 									</div>
-								</div>
-
-
-								<div class="feature-lower_box">
-									<div class="row clearfix">
-																				<div class="feature-three col-lg-4 col-md-4 col-sm-6">
-											<div class="feature-three_inner">
-												<span class="feature-three_icon">
-													<img src="/images/icons/service-35.png" alt="" />
-												</span>
-												Calendario<br />
-mensual											</div>
-										</div>
-																				<div class="feature-three col-lg-4 col-md-4 col-sm-6">
-											<div class="feature-three_inner">
-												<span class="feature-three_icon">
-													<img src="/images/icons/service-36.png" alt="" />
-												</span>
-												Piezas<br />
-listas											</div>
-										</div>
-																				<div class="feature-three col-lg-4 col-md-4 col-sm-6">
-											<div class="feature-three_inner">
-												<span class="feature-three_icon">
-													<img src="/images/icons/service-37.png" alt="" />
-												</span>
-												Optimización<br />
-por performance											</div>
-										</div>
-																			</div>
-								</div>
-							</div>
+															</div>
 						</div>
 					</div>
 				</div>
@@ -375,7 +517,7 @@ por performance											</div>
 							</div>
 
 							<div class="text">
-								Soluciones tecnológicas para PYMES y startups.
+								Soluciones tecnológicas para PyMES y Startups.
 								Software, automatización y estrategia digital para crecer con orden.
 							</div>
 
@@ -469,6 +611,8 @@ por performance											</div>
 <script src="/js/magnific-popup.min.js"></script>
 
 <script src="/js/script.js"></script>
+
+<script src="/js/custom.js"></script> <!-- Nuestro archivo JS -->
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->

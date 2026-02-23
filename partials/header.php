@@ -100,11 +100,11 @@
 										</li>
 										<li class="dropdown"><a href="#">Servicios</a>
 											<ul>
-												<li><a href="<?= $base_url ?>/servicios/marketing/" target="_blank">Marketing y Adquisición</a></li>
-												<li><a href="<?= $base_url ?>/servicios/consultoria/" target="_blank">Consultoría en negocios</a></li>
-												<li><a href="<?= $base_url ?>/servicios/desarrollo/" target="_blank">Desarrollos y soluciones</a></li>
-												<li><a href="<?= $base_url ?>/servicios/ia/" target="_blank">IA aplicada a soporte/ventas</a></li>
-												<li><a href="<?= $base_url ?>/servicios/content/" target="_blank">Content Factory</a></li>
+												<li><a href="<?= $base_url ?>/servicios/marketing/">Marketing y Adquisición</a></li>
+												<li><a href="<?= $base_url ?>/servicios/consultoria/">Consultoría en negocios</a></li>
+												<li><a href="<?= $base_url ?>/servicios/desarrollo/">Desarrollos y soluciones</a></li>
+												<li><a href="<?= $base_url ?>/servicios/ia/">IA aplicada a soporte/ventas</a></li>
+												<li><a href="<?= $base_url ?>/servicios/content/">Content Factory</a></li>
 											</ul>
 										</li>
 										<?php if ($nav_variant === "home"): ?>

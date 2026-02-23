@@ -16,7 +16,7 @@
 							</div>
 
 							<div class="text">
-								Soluciones tecnológicas para PYMES y startups.
+								Soluciones tecnológicas para PyMES y Startups.
 								Software, automatización y estrategia digital para crecer con orden.
 							</div>
 
@@ -110,6 +110,8 @@
 <script src="<?= $base_url ?>/js/magnific-popup.min.js"></script>
 
 <script src="<?= $base_url ?>/js/script.js"></script>
+
+<script src="<?= $base_url ?>/js/custom.js"></script> <!-- Nuestro archivo JS -->
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->

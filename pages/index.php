@@ -156,7 +156,7 @@ include __DIR__ . '/../partials/header.php';
 						<a class="overlay-link" href="<?= $base_url ?>/servicios/content/"></a>
 						<span class="color-layer"></span>
 						<span class="feature-block_one-icon">
-							<img src="<?= $base_url ?>/images/icons/feature-5.png" alt="" />
+							<img src="<?= $base_url ?>/images/icons/content-icon.webp" alt="" />
 						</span>
 						<h5 class="feature-block_one-title">Content Factory</h5>
 					</div>
@@ -181,13 +181,9 @@ include __DIR__ . '/../partials/header.php';
 					<!-- Sponsors Carousel -->
 					<ul class="sponsors-carousel-two owl-carousel owl-theme">
 						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-plusrasgo.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo_cooperativa.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/7.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/8.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/5.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/6.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/7.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/clients/8.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-cooperativa.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-ahorrointeligente.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-SNZ.png" alt=""></a></figure></li>
 					</ul>
 				</div>
 			</div>

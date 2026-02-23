@@ -120,7 +120,7 @@ foreach ($routes as $cfg) {
 }
 
 // 7) Copiar assets al dist
-$assetDirs = ['css', 'js', 'images', 'fonts'];
+$assetDirs = ['css', 'js', 'images', 'fonts', 'videos'];
 foreach ($assetDirs as $dir) {
     if (is_dir("$root/$dir")) {
         rcopy("$root/$dir", "$dist/$dir");

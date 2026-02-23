@@ -244,8 +244,9 @@
 			margin:0,
 			nav:true,
 			//autoHeight: true,
-			smartSpeed: 500,
-			autoplay: 6000,
+			smartSpeed: 1500,
+			autoplay: true,
+			autoplayTimeout: 7000, // tiempo que se queda en cada slide
 			navText: [ '<span class="fa-solid fa-angle-left fa-fw"></span>', '<span class="fa-solid fa-angle-right fa-fw"></span>' ],
 			responsive:{
 				0:{
