@@ -1,30 +1,45 @@
 /* Quitamos la capitalización automática del template 
     global fuerte: headings, botones, links, etc. */
-h1, h2, h3, h4, h5, h6,
-p, a, button, span, li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+span,
+li,
 .sec-title_two-heading,
-.btn-style-one, .btn-style-two, .btn-style-three,
+.btn-style-one,
+.btn-style-two,
+.btn-style-three,
 .theme-btn,
-.main-header .navigation > li > a {
+.main-header .navigation>li>a {
     text-transform: none !important;
 }
 
-
+/* Hero slider */
+.slider-two .slide{
+    position: relative !important;
+    padding: 80px 0px 220px !important;
+}
 
 /* Activamos el gradiente vertical en el fondo del logo */
-.header-style-two .logo:before{
+.header-style-two .logo:before {
     background-image: linear-gradient(to bottom, #7114EF, #1475F7) !important;
 }
 
 
-:root{
-  /* Elegimos 2 colores base del gradiente */
+:root {
+    /* Elegimos 2 colores base del gradiente */
     --py-start: #7114EF;
-    --py-end:   #1475F7;
+    --py-end: #1475F7;
 
     /* Usamos las variantes que usa el template */
     --color-thirtythree: var(--py-start);
-    --color-thirtytwo:   var(--py-end);
+    --color-thirtytwo: var(--py-end);
 
     /* Colores “solid” que usa en hover/active */
     --main-color: var(--py-end);
@@ -47,14 +62,328 @@ p, a, button, span, li,
 
 /* Sidebar con colores y gradiente */
 .cat-list li a:hover,
-.cat-list li.active a{
+.cat-list li.active a {
     color: var(--white-color);
-    background-color: var(--main-color);         /* fallback */
-    background-image: var(--py-gradient);        /* el gradiente “oficial” */
+    background-color: var(--main-color);
+    /* fallback */
+    background-image: var(--py-gradient);
+    /* el gradiente “oficial” */
     border-color: var(--main-color);
 }
 
 
 .contact-widget .help {
     line-height: 1.1;
+}
+
+
+/* SECCION CONTENT FACTORY 
+    ==================== */
+
+/* Titulos */
+.service-detail.is-content-factory :is(h1, h2, h3, h4){
+    margin-top: 0 !important;
+    text-align: center;
+}
+
+.service-detail.is-content-factory p {
+    text-align: center;
+}
+
+.sidebar-page-container {
+    position: relative;
+    padding: 60px 0px 80px !important;
+}
+
+/* Divider de "Trabajos realizados" */
+/* .content-works-divider {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 3px solid rgba(0, 0, 0, .12);
+}
+
+.content-works-title {
+    margin: 0 0 14px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+} */
+
+.content-works-divider--pill{
+    margin-top: 28px;
+    padding-top: 18px;
+    position: relative;
+    text-align: center;
+}
+
+.content-works-divider--pill::before{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    top: 40px;           /* altura de la línea */
+    height:1px;
+    background: rgba(0,0,0,.12);
+}
+
+.content-works-pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 25px;
+    background: #fff;    /* para “cortar” la línea */
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+    position: relative;
+    z-index: 1;
+}
+
+/* Textos por slide */
+.content-video-slide {
+    text-align: center;
+}
+
+.video-client {
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.video-desc {
+    margin: 12px auto 0;
+    max-width: 340px;
+    font-size: 14px;
+    opacity: .85;
+}
+
+/* Separar dots del contenido (para que queden bien abajo) */
+.content-video-slider .owl-dots {
+    margin-top: 16px !important;
+}
+
+/* ===== Content Factory - Mobile first ===== */
+.content-video-slider-wrapper {
+    margin-top: 26px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* Deja aire arriba/abajo para que el "scale" no se corte */
+.content-video-slider .owl-stage-outer {
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+/* Alternativa (o adicional): aire por slide */
+.content-video-slider .owl-item {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    box-sizing: border-box;
+}
+
+.phone {
+    width: min(320px, 86vw);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 44px;
+    /* más “teléfono” */
+    padding: 12px;
+    background: linear-gradient(180deg, #15151b 0%, #0b0b10 100%);
+}
+
+/* “bisel” y brillo */
+.phone:after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 38px;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .05);
+    background: radial-gradient(800px 260px at 20% 0%, rgba(255, 255, 255, .10), transparent 55%);
+}
+
+/* notch */
+.phone:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 24px;
+    border-radius: 0 0 16px 16px;
+    background: rgba(0, 0, 0, .55);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
+    z-index: 3;
+}
+
+.phone__video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    /* clave para 9:16 */
+    border-radius: 34px;
+    display: block;
+    background: #000;
+}
+
+/* tap overlay */
+.phone__tap {
+    position: absolute;
+    inset: 12px;
+    border-radius: 34px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    z-index: 4;
+}
+
+/* icono play (se oculta cuando reproduce) */
+.phone__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .45);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .25), inset 0 0 0 1px rgba(255, 255, 255, .15);
+}
+
+.phone__play:before {
+    content: '';
+    position: absolute;
+    left: 26px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 18px solid rgba(255, 255, 255, .92);
+}
+
+/* barra */
+.phone__progress {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
+    z-index: 5;
+    display: grid;
+    gap: 8px;
+}
+
+.phone__seek {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .22);
+    outline: none;
+}
+
+.phone__seek::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .92);
+}
+
+.phone__time {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .85);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .45);
+}
+
+/* estado reproduciendo: esconder play */
+.phone.is-playing .phone__play {
+    display: none;
+}
+
+/* Achicamos los costados  */
+.content-video-slider .owl-item .content-video-slide {
+    opacity: 0.55;
+    transform: scale(.94);
+    transition: transform .25s ease, opacity .25s ease;
+}
+
+.content-video-slider .owl-item.active.center .content-video-slide {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* todos clickeables para seleccionar */
+.content-video-slider .owl-item {
+    pointer-events: auto;
+}
+
+/* pero dentro del slide, bloqueamos interacción salvo en el centro */
+.content-video-slider .owl-item .phone__tap,
+.content-video-slider .owl-item .phone__video,
+.content-video-slider .owl-item .phone__seek {
+    pointer-events: none;
+}
+
+.content-video-slider .owl-item.active.center .phone__tap,
+.content-video-slider .owl-item.active.center .phone__video,
+.content-video-slider .owl-item.active.center .phone__seek {
+    pointer-events: auto;
+}
+
+/* extra: que nada "se pise" raro */
+.content-video-slide {
+    position: relative;
+    z-index: 1;
+}
+
+.content-video-slider .owl-item.active.center .content-video-slide {
+    z-index: 5;
+}
+
+
+/* en desktop se nota más el carrusel */
+@media (min-width: 992px) {
+    .content-video-slider .owl-item .content-video-slide {
+        /* transform: scale(.86); */
+    }
+
+    .content-video-slider .owl-item.active.center .content-video-slide {
+        transform: scale(1.02);
+    }
+}
+
+
+/* ===== Owl dots: forzar que se vean ===== */
+.content-video-slider.owl-theme .owl-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.content-video-slider.owl-theme .owl-dots .owl-dot {
+    display: inline-flex !important;
+}
+
+.content-video-slider.owl-theme .owl-dots .owl-dot span {
+    width: 20px;
+    height: 20px;
+    margin: 0 !important;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .25);
+    transition: transform .15s ease, background .15s ease;
+}
+
+.content-video-slider.owl-theme .owl-dots .owl-dot.active span {
+    background: rgba(0, 0, 0, .55);
+    transform: scale(1.15);
 }

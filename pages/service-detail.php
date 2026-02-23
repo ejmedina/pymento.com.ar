@@ -147,10 +147,11 @@ $services = [
 		"page_title" => "Servicios | Content Factory",
 		"hero" => [
 		"image" => $base_url . "/images/img-pymento/service-content-1.webp",
-		"excerpt" => "Contenido y piezas listas para comunicar mejor y vender más.",
+		"excerpt" => "Videos realistas para campañas usando modelos generados con IA.",
 		"paragraphs" => [
-			"Creamos contenido alineado a tu marca y a tus objetivos (captación, confianza y conversión).",
-			"Planificamos, producimos y optimizamos para sostener presencia con coherencia."
+			"Creamos piezas para marketing online con modelos humanos generados con IA: realistas, consistentes y listos para escalar.",
+			"Esto reduce costos y tiempos de jornadas de filmación, sin perder calidad visual.",
+			"Ofrecemos distintos modelos y paquetes de videos según tu marca, producto o servicio."
 		],
 		],
 		"feature_twos" => [
@@ -178,6 +179,23 @@ $services = [
 	],
 ];
 
+$video_files = [
+	['file' => 'demo-1.mp4', 'poster' => 'video-poster-1.webp', 'client' => 'Autoelevadores DG', 'desc' => 'Campaña de adquisición de clientes'],
+	['file' => 'demo-2.mp4', 'poster' => 'video-poster-2.jpg', 'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['file' => 'demo-3.mp4', 'poster' => 'video-poster-3.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['file' => 'demo-4.mp4', 'poster' => 'video-poster-4.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['file' => 'demo-5.mp4', 'poster' => 'video-poster-5.webp',  'client' => 'PGI Argentina', 'desc' => 'Campaña de adquisición de clientes'],
+	['file' => 'demo-6.mp4', 'poster' => 'video-poster-6.webp',  'client' => 'Ahorro Inteligente', 'desc' => 'Campaña de adquisición de clientes'],
+];
+
+$content_videos = array_map(function($v) use ($base_url) {
+	return [
+		'src'    => $base_url . "/videos/" . $v['file'],
+		'poster' => $base_url . "/images/img-pymento/" . $v['poster'],
+		'client' => $v['client'] ?? '',
+		'desc' => $v['desc'] ?? '',
+	];
+}, $video_files);
 
 
 $service_key = $_GET["service"] ?? null;
@@ -252,68 +270,128 @@ include __DIR__ . '/../partials/header.php';
 
 					<!-- Content Side -->
 					<div class="content-side right-sidebar col-lg-8 col-md-12 col-sm-12">
-						<div class="service-detail">
+						<div class="service-detail <?= ($service_key === 'content') ? 'is-content-factory' : '' ?>">
 							<div class="inner-box">
-								<div class="image">
-									<img src="<?= htmlspecialchars($services[$service_key]["hero"]["image"]) ?>" alt="" />
-								</div>
+								<?php if ($service_key !== 'content'): ?>
+									<div class="image">
+										<img src="<?= htmlspecialchars($services[$service_key]["hero"]["image"]) ?>" alt="" />
+									</div>
 
-								<h3><?= htmlspecialchars($services[$service_key]["title"]) ?></h3>
+									<h3><?= htmlspecialchars($services[$service_key]["title"]) ?></h3>
+									<p><?= htmlspecialchars($services[$service_key]["hero"]["excerpt"]) ?></p>
 
-								<p><?= htmlspecialchars($services[$service_key]["hero"]["excerpt"]) ?></p>
-
-								<?php if (!empty($services[$service_key]["hero"]["paragraphs"])): ?>
-									<?php foreach ($services[$service_key]["hero"]["paragraphs"] as $p): ?>
-										<p><?= htmlspecialchars($p) ?></p>
-									<?php endforeach; ?>
-								<?php endif; ?>
+									<?php if (!empty($services[$service_key]["hero"]["paragraphs"])): ?>
+										<?php foreach ($services[$service_key]["hero"]["paragraphs"] as $p): ?>
+											<p><?= htmlspecialchars($p) ?></p>
+										<?php endforeach; ?>
+									<?php endif; ?>
 
 
-								<div class="row clearfix">
-									<?php foreach ($services[$service_key]["feature_twos"] as $ft): ?>
-										<div class="feature-two col-lg-6 col-md-6 col-sm-12">
-											<div class="feature-two_inner">
-												<div class="feature-two_content">
-													<span class="feature-two_icon">
-														<img src="<?= htmlspecialchars($ft["icon"]) ?>" alt="" />
-													</span>
-													<h5 class="feature-two_heading"><?= htmlspecialchars($ft["heading"]) ?></h5>
-													<div class="feature-two_text"><?= htmlspecialchars($ft["text"]) ?></div>
+									<div class="row clearfix">
+										<?php foreach ($services[$service_key]["feature_twos"] as $ft): ?>
+											<div class="feature-two col-lg-6 col-md-6 col-sm-12">
+												<div class="feature-two_inner">
+													<div class="feature-two_content">
+														<span class="feature-two_icon">
+															<img src="<?= htmlspecialchars($ft["icon"]) ?>" alt="" />
+														</span>
+														<h5 class="feature-two_heading"><?= htmlspecialchars($ft["heading"]) ?></h5>
+														<div class="feature-two_text"><?= htmlspecialchars($ft["text"]) ?></div>
+													</div>
 												</div>
 											</div>
-										</div>
-									<?php endforeach; ?>
-								</div>
-
-
-								<div class="row clearfix">
-									<div class="column col-lg-6 col-md-6 col-sm-12">
-										<div class="image">
-											<img src="<?= htmlspecialchars($services[$service_key]["mid"]["image"]) ?>" alt="" />
-										</div>
-									</div>
-
-									<div class="column col-lg-6 col-md-6 col-sm-12">
-										<h4><?= htmlspecialchars($services[$service_key]["mid"]["heading"]) ?></h4>
-										<p><?= htmlspecialchars($services[$service_key]["mid"]["text"]) ?></p>
-									</div>
-								</div>
-
-
-								<div class="feature-lower_box">
-									<div class="row clearfix">
-										<?php foreach ($services[$service_key]["feature_threes"] as $f3): ?>
-										<div class="feature-three col-lg-4 col-md-4 col-sm-6">
-											<div class="feature-three_inner">
-												<span class="feature-three_icon">
-													<img src="<?= htmlspecialchars($f3["icon"]) ?>" alt="" />
-												</span>
-												<?= nl2br(htmlspecialchars($f3["text"])) ?>
-											</div>
-										</div>
 										<?php endforeach; ?>
 									</div>
-								</div>
+
+
+									<div class="row clearfix">
+										<div class="column col-lg-6 col-md-6 col-sm-12">
+											<div class="image">
+												<img src="<?= htmlspecialchars($services[$service_key]["mid"]["image"]) ?>" alt="" />
+											</div>
+										</div>
+
+										<div class="column col-lg-6 col-md-6 col-sm-12">
+											<h4><?= htmlspecialchars($services[$service_key]["mid"]["heading"]) ?></h4>
+											<p><?= htmlspecialchars($services[$service_key]["mid"]["text"]) ?></p>
+										</div>
+									</div>
+
+
+									<div class="feature-lower_box">
+										<div class="row clearfix">
+											<?php foreach ($services[$service_key]["feature_threes"] as $f3): ?>
+											<div class="feature-three col-lg-4 col-md-4 col-sm-6">
+												<div class="feature-three_inner">
+													<span class="feature-three_icon">
+														<img src="<?= htmlspecialchars($f3["icon"]) ?>" alt="" />
+													</span>
+													<?= nl2br(htmlspecialchars($f3["text"])) ?>
+												</div>
+											</div>
+											<?php endforeach; ?>
+										</div>
+									</div>
+								<?php else: ?>
+									<!-- (B) Layout especial Content Factory -->
+									<h3><?= htmlspecialchars($services[$service_key]["title"]) ?></h3>
+									<p><?= htmlspecialchars($services[$service_key]["hero"]["excerpt"]) ?></p>
+
+									<?php foreach (($services[$service_key]["hero"]["paragraphs"] ?? []) as $p): ?>
+										<p><?= htmlspecialchars($p) ?></p>
+									<?php endforeach; ?>
+
+									<!-- Divider + título sección -->
+									<div class="content-works-divider content-works-divider--pill">
+										<h4 class="content-works-pill">Trabajos realizados</h4>
+									</div>
+
+									<!-- Slider videos estilo teléfono -->
+									<div class="content-video-slider-wrapper">
+										<div class="content-video-slider owl-carousel owl-theme">
+											<?php foreach ($content_videos as $i => $v): ?>
+												<div class="content-video-slide" data-pos="<?= (int)$i ?>">
+												
+													<div class="phone">
+														<video
+															class="phone__video"
+															playsinline
+															preload="none"
+															disablepictureinpicture
+															controlslist="nofullscreen noremoteplayback nodownload"
+															poster="<?= htmlspecialchars($v["poster"] ?? "") ?>"
+															data-src="<?= htmlspecialchars($v["src"]) ?>"
+														></video>
+
+														<!-- overlay play (solo cuando está pausado) -->
+														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
+															<span class="phone__play"></span>
+														</button>
+
+														<!-- barra de progreso custom -->
+														<div class="phone__progress" aria-label="Progreso del video">
+															<input class="phone__seek" type="range" min="0" max="1000" value="0" step="1">
+															<div class="phone__time">
+																<span class="phone__tcur">0:00</span>
+																<span class="phone__tsep">/</span>
+																<span class="phone__tdur">0:00</span>
+															</div>
+														</div>
+													</div>
+
+													<?php if (!empty($v['client'])): ?>
+														<h4>Cliente: <?= htmlspecialchars($v['client']) ?></h4>
+													<?php endif; ?>
+
+													<?php if (!empty($v['desc'])): ?>
+														<div class="video-desc"><?= htmlspecialchars($v['desc']) ?></div>
+													<?php endif; ?>
+
+												</div>
+											<?php endforeach; ?>
+										</div>
+									</div>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
