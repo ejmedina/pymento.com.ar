@@ -1,75 +1,137 @@
 let CONTENT_SLIDER_DRAGGING = false;
 
-function formatTime(sec) {
-    sec = Math.max(0, Math.floor(sec || 0));
-    const m = Math.floor(sec / 60);
-    const s = sec % 60;
-    return `${m}:${String(s).padStart(2, '0')}`;
-}
+// =====================
+// YouTube inline players
+// =====================
 
-function ensureVideoSrc(video) {
-    if (!video) return;
-    if (video.src) return;
-    const ds = video.getAttribute('data-src');
-    if (ds) {
-        video.src = ds;
-        // fuerza a que el browser “registre” el src
-        video.load();
+const YTPlayers = new Map(); // key: phone__player DOM, value: YT.Player
+let YTReady = false;
+let YTQueue = [];
+
+window.onYouTubeIframeAPIReady = function () {
+    YTReady = true;
+    YTQueue.forEach(fn => fn());
+    YTQueue = [];
+};
+
+const YTReadyPromises = new Map(); // key: holder, value: Promise<YT.Player>
+
+function getYTPlayerAsync(phoneEl) {
+    const holder = phoneEl.querySelector('.phone__player');
+    if (!holder) return Promise.resolve(null);
+
+    let host = holder.querySelector('.yt-host');
+    if (!host) {
+        host = document.createElement('div');
+        host.className = 'yt-host';
+        holder.appendChild(host);
     }
+
+    // si ya existe player, devolverlo
+    if (YTPlayers.has(holder)) return Promise.resolve(YTPlayers.get(holder));
+
+    // si ya hay promesa en curso, devolverla
+    if (YTReadyPromises.has(holder)) return YTReadyPromises.get(holder);
+
+    const ytId = holder.getAttribute('data-yt-id');
+    if (!ytId) return Promise.resolve(null);
+
+    const p = new Promise((resolve) => {
+        runWhenYTReady(() => {
+            requestAnimationFrame(() => {
+                const player = new YT.Player(host, {
+                    videoId: ytId,
+                    playerVars: {
+                        playsinline: 1,
+                        controls: 1,
+                        rel: 0,
+                        modestbranding: 1,
+                        fs: 0,
+                        iv_load_policy: 3
+                    },
+                    events: {
+                        onReady: () => {
+                            // guardar y resolver
+                            YTPlayers.set(holder, player);
+                            phoneEl.classList.add('has-iframe');
+                            resolve(player);
+                        },
+                        onStateChange: (ev) => {
+                            const phoneEl = holder.closest('.phone');
+
+                            if (ev.data === YT.PlayerState.PLAYING) {
+                                if (phoneEl) phoneEl.classList.add('is-playing');
+                                pauseAllPlayers(ev.target);
+                            }
+
+                            if (ev.data === YT.PlayerState.PAUSED || ev.data === YT.PlayerState.ENDED) {
+                                if (phoneEl) phoneEl.classList.remove('is-playing');
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    });
+
+    YTReadyPromises.set(holder, p);
+    return p;
 }
 
-function setupPhoneVideo(phone) {
-    const video = phone.querySelector('.phone__video');
-    const tap = phone.querySelector('.phone__tap');
-    const seek = phone.querySelector('.phone__seek');
-    const tcur = phone.querySelector('.phone__tcur');
-    const tdur = phone.querySelector('.phone__tdur');
+function runWhenYTReady(fn) {
+    if (YTReady) fn();
+    else YTQueue.push(fn);
+}
 
-    tap.addEventListener('click', async () => {
+function pauseAllPlayers(exceptPlayer) {
+    YTPlayers.forEach((p, holder) => {
+        if (!p) return;
+        if (exceptPlayer && p === exceptPlayer) return; // NO pausar el actual
+        try { p.pauseVideo(); } catch (e) { }
+
+        // Actualizar UI del phone
+        const phoneEl = holder && holder.closest ? holder.closest('.phone') : null;
+        if (phoneEl) phoneEl.classList.remove('is-playing');
+    });
+}
+
+function setupPhoneYouTube(phone) {
+    const tap = phone.querySelector('.phone__tap');
+    const holder = phone.querySelector('.phone__player');
+    if (!tap || !holder) return;
+
+    tap.addEventListener('click', async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Si venimos de drag, ignorar click fantasma
         if (CONTENT_SLIDER_DRAGGING) return;
 
-        // 1) Cargamos el src
-        ensureVideoSrc(video);
+        const player = await getYTPlayerAsync(phone);
+        if (!player) return;
 
-        // 2) pausar otros
-        document.querySelectorAll('.content-video-slider .phone__video').forEach(v => {
-            if (v !== video && !v.paused) v.pause();
+        let state = -1;
+        try { state = player.getPlayerState(); } catch (err) {}
+
+        // Toggle real
+        if (state === YT.PlayerState.PLAYING || state === YT.PlayerState.BUFFERING) {
+            try { player.pauseVideo(); } catch (err) {}
+            phone.classList.remove('is-playing');
+            return;
+            }
+
+            // Si no está reproduciendo: play (y pausamos los demás)
+            pauseAllPlayers(player);
+            try { player.playVideo(); } catch (err) {}
+            phone.classList.add('is-playing');
         });
-
-        if (video.paused) {
-            try { await video.play(); } catch (e) { }
-        } else {
-            video.pause();
-        }
-    });
-
-    video.addEventListener('play', () => phone.classList.add('is-playing'));
-    video.addEventListener('pause', () => phone.classList.remove('is-playing'));
-    video.addEventListener('ended', () => phone.classList.remove('is-playing'));
-
-    video.addEventListener('loadedmetadata', () => {
-        tdur.textContent = formatTime(video.duration);
-    });
-
-    video.addEventListener('timeupdate', () => {
-        const dur = video.duration || 0;
-        tcur.textContent = formatTime(video.currentTime);
-        if (dur > 0 && !seek.matches(':active')) {
-            seek.value = Math.round((video.currentTime / dur) * 1000);
-        }
-    });
-
-    seek.addEventListener('input', () => {
-        const dur = video.duration || 0;
-        if (dur > 0) video.currentTime = (seek.value / 1000) * dur;
-    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     CONTENT_SLIDER_DRAGGING = false;
 
-    // 1) Setup de videos (solo dentro del slider)
-    document.querySelectorAll('.content-video-slider .phone').forEach(setupPhoneVideo);
+    // 1) Setup de videos (solo dentro del slider);
+    document.querySelectorAll('.content-video-slider .phone').forEach(setupPhoneYouTube);
 
     // 2) Owl init solo si existe
     if (!(window.jQuery && jQuery().owlCarousel)) {
@@ -83,34 +145,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializacion del owlCarousel
     $slider.owlCarousel({
-    loop: true,
-    nav: false,
-    dots: true,
-    center: true,
-    responsive: {
-        0:   { 
-            items: 1,
-            margin: 14,
-            stagePadding: 0
-        },
-        768: { 
-            items: 2,
-            margin: -100,
-            stagePadding: 0 
-        }
+        loop: true,
+        nav: false,
+        dots: true,
+        center: true,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 14,
+                stagePadding: 0
+            },
+            768: {
+                items: 2,
+                margin: -100,
+                stagePadding: 0
+            }
         }
     });
 
     // Marcar cuando el usuario está arrastrando el carrusel
     $slider.on('drag.owl.carousel', function () {
-    CONTENT_SLIDER_DRAGGING = true;
+        CONTENT_SLIDER_DRAGGING = true;
 
-    // Pausamos todo apenas empieza a arrastrar
-    document.querySelectorAll('.content-video-slider .phone__video')
-        .forEach(v => { if (v && !v.paused) v.pause(); });
-
-    document.querySelectorAll('.content-video-slider .phone')
-        .forEach(p => p.classList.remove('is-playing'));
+        // Pausamos todo apenas empieza a arrastrar
+        pauseAllPlayers(null);
     });
 
     // Cuando termina el drag, esperamos un tick para que no caiga el click fantasma
@@ -124,20 +182,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (jQuery(this).hasClass('center')) return;
 
         // si clickeás en controles del video, NO mover carrusel
-        if (jQuery(e.target).closest('.phone__tap, .phone__video, .phone__seek').length) return;
+        if (jQuery(e.target).closest('.phone__tap, iframe, .phone__player').length) return;
 
         const pos = jQuery(this).find('.content-video-slide').data('pos');
         if (pos === undefined) return;
 
         $slider.trigger('to.owl.carousel', [pos, 250, true]);
     });
-    
+
     // 4) Cuando cambia de slide: pausar todo
     $slider.on('changed.owl.carousel', function () {
-        document.querySelectorAll('.content-video-slider .phone__video')
-        .forEach(v => { if (v && !v.paused) v.pause(); });
-
-        document.querySelectorAll('.content-video-slider .phone')
-        .forEach(p => p.classList.remove('is-playing'));
+        pauseAllPlayers(null);
     });
 });
