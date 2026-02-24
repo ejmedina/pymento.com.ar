@@ -20,6 +20,9 @@ li,
     text-transform: none !important;
 }
 
+/* INDEX
+    ======================= */
+
 /* Hero slider */
 .slider-two .slide{
     position: relative !important;
@@ -47,13 +50,126 @@ li,
     --py-gradient: linear-gradient(to top left, var(--py-start) 0%, var(--py-end) 100%);
 }
 
+/* HERO SLIDER (slider-two) - Mobile: ocultar flechas, mostrar dots */
+@media (max-width: 767px) {
 
-/* Index: TESTIMONIAL */
+    .slider-two .single-item-carousel {
+        position: relative; /* clave */
+    }
+
+    /* ocultar prev/next */
+    .slider-two .single-item-carousel .owl-nav {
+        display: none !important;
+    }
+
+    /* mostrar dots */
+    .slider-two .single-item-carousel .owl-dots {
+        display: flex  !important;
+        justify-content: center;
+        gap: 10px;
+        position: absolute !important;
+        left: 0;
+        right: 0;
+
+        bottom: 170px;         
+        z-index: 9999 !important;
+
+        pointer-events: auto;
+    }
+
+    .slider-two .single-item-carousel .owl-dots .owl-dot {
+        display: inline-flex !important;
+    }
+
+    .slider-two .single-item-carousel .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px;
+        margin: 0 !important;
+        border-radius: 999px;
+        background: rgba(255,255,255,.55);
+    }
+
+    .slider-two .single-item-carousel .owl-dots .owl-dot.active span {
+        background: rgba(255,255,255,.9);
+        transform: scale(1.2);
+    }
+}
+
+/* TARJETAS DE SERVICIOS */
+.content-factory-icon {
+    transform: scale(1.25);
+    transform-origin: center;
+}
+
+/* NUESTROS CLIENTES */
+/* Primero borramos la linea de :before despues de "nuestros clientes */
+.client-one_title:before{
+    content: none;
+}
+
+/* Ajustamos el tamaño */
+@media (min-width: 992px) {
+
+  /* achicar la columna del título */
+    .clients-one .clients-one_title-column {
+        flex: 0 0 auto;
+        width: 25%;
+        top: 25px;
+    }
+
+  /* agrandar la columna del carousel */
+    .clients-one .clients-one_carousel-column {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+}
+
+.client-logo-small {
+    max-width: 90%;
+}
+
+.client-one_image-box {
+    padding: 20px 15px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.client-one_image-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.client-one_image-box:hover img {
+    transform: scale(1.2) translateY(-8px);
+}
+
+
+
+/* TESTIMONIAL */
 .testimonial-section {
     background-size: contain;
 }
 
-/* SERVICE DETAIL */
+/* alinear author-box siempre abajo */
+.testimonial-block .inner-box{
+    display: flex;
+    flex-direction: column;
+    height: 200px; /* a ojo */   
+}
+
+/* empuja el autor hacia abajo */
+.testimonial-block .author-box{
+    margin-top: auto;
+}
+
+
+/* ====================
+    SERVICE DETAIL */
 
 /* Imagen de fondo HERO */
 .page-title {
@@ -71,9 +187,47 @@ li,
     border-color: var(--main-color);
 }
 
-
 .contact-widget .help {
     line-height: 1.1;
+}
+
+/* Resetear SOLO el <a class="phone"> del contact widget 
+    (nuestro phone de content factory tienen class="phone")*/
+.contact-widget a.phone{
+    width: auto !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    position: static !important;
+}
+
+.contact-widget a.phone::before,
+.contact-widget a.phone::after{
+    content: none !important;
+}
+
+.contact-widget .button-box .fa-brands {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 55px;
+    height: 51px;
+    line-height: 51px;
+    font-size: 30px;
+    color: var(--white-color);
+    background: linear-gradient(to left, var(--color-sixtyeight) 0%, var(--color-sixtyseven) 100%);
+}
+
+/* transición suave */
+.contact-widget .button-box .fa-whatsapp{
+    transition: transform 0.2s ease;
+}
+
+/* agrandar cuando el mouse está sobre el botón */
+.contact-widget .button-box a:hover .fa-whatsapp{
+    font-size: 40px;
+    background: linear-gradient(to left, #25D366 0%, #128C7E 100%);
 }
 
 
@@ -140,7 +294,28 @@ li,
     z-index: 1;
 }
 
-/* Textos por slide */
+/* TEXTOS Y TITULOS POR SLIDES */
+/* Por defecto: ocultar textos de todos los slides */
+.content-video-slider .video-client,
+.content-video-slider .video-desc{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-6px);
+    transition: opacity .2s ease, transform .2s ease, max-height .2s ease;
+    pointer-events: none;
+}
+
+/* Mostrar solo en el slide centrado */
+.content-video-slider .owl-item.active.center .video-client,
+.content-video-slider .owl-item.active.center .video-desc{
+    opacity: 1;
+    max-height: 200px; /* suficiente para 2-3 líneas */
+    transform: translateY(0);
+    pointer-events: auto;
+    margin-top: 12px; 
+}
+
 .content-video-slide {
     text-align: center;
 }
@@ -148,6 +323,7 @@ li,
 .video-client {
     font-weight: 700;
     margin: 0 0 10px;
+    font-size: 25px;
 }
 
 .video-desc {
@@ -170,7 +346,7 @@ li,
 }
 
 
-/* Deja aire arriba/abajo para que el "scale" no se corte */
+/* Aire arriba/abajo para que el "scale" no se corte */
 .content-video-slider .owl-stage-outer {
     padding-top: 2px;
     padding-bottom: 5px;
@@ -191,6 +367,56 @@ li,
     /* más “teléfono” */
     padding: 12px;
     background: linear-gradient(180deg, #15151b 0%, #0b0b10 100%);
+}
+
+/* Pantalla del teléfono: fija (9:16) con poster */
+.phone__screen{
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: 34px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Contenedor del player ocupa el “pantallazo” del teléfono */
+.phone__player{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* El nodo que YouTube va a usar */
+.phone__player .yt-host {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Si YouTube mete iframe adentro (o reemplaza), forzamos full size */
+.phone__player iframe,
+.phone__player .yt-host iframe {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+    display: block !important;
+}
+
+/* Iframe de YouTube adentro */
+.phone__player iframe{
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
+    pointer-events: none; /* Para poder drag/click en owl */
 }
 
 /* “bisel” y brillo */
@@ -219,14 +445,13 @@ li,
     z-index: 3;
 }
 
-.phone__video {
+/* .phone__video {
     width: 100%;
     aspect-ratio: 9 / 16;
-    /* clave para 9:16 */
     border-radius: 34px;
     display: block;
     background: #000;
-}
+} */
 
 /* tap overlay */
 .phone__tap {
@@ -266,7 +491,7 @@ li,
 }
 
 /* barra */
-.phone__progress {
+/* .phone__progress {
     position: absolute;
     left: 18px;
     right: 18px;
@@ -274,9 +499,9 @@ li,
     z-index: 5;
     display: grid;
     gap: 8px;
-}
+} */
 
-.phone__seek {
+/* .phone__seek {
     width: 100%;
     -webkit-appearance: none;
     appearance: none;
@@ -293,16 +518,16 @@ li,
     height: 14px;
     border-radius: 999px;
     background: rgba(255, 255, 255, .92);
-}
+} */
 
-.phone__time {
+/* .phone__time {
     display: flex;
     justify-content: flex-end;
     gap: 6px;
     font-size: 12px;
     color: rgba(255, 255, 255, .85);
     text-shadow: 0 2px 10px rgba(0, 0, 0, .45);
-}
+} */
 
 /* estado reproduciendo: esconder play */
 .phone.is-playing .phone__play {
@@ -328,13 +553,13 @@ li,
 
 /* pero dentro del slide, bloqueamos interacción salvo en el centro */
 .content-video-slider .owl-item .phone__tap,
-.content-video-slider .owl-item .phone__video,
+.content-video-slider .owl-item .phone__player,
 .content-video-slider .owl-item .phone__seek {
     pointer-events: none;
 }
 
 .content-video-slider .owl-item.active.center .phone__tap,
-.content-video-slider .owl-item.active.center .phone__video,
+.content-video-slider .owl-item.active.center .phone__player,
 .content-video-slider .owl-item.active.center .phone__seek {
     pointer-events: auto;
 }
@@ -375,8 +600,8 @@ li,
 }
 
 .content-video-slider.owl-theme .owl-dots .owl-dot span {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     margin: 0 !important;
     border-radius: 999px;
     background: rgba(0, 0, 0, .25);
@@ -386,4 +611,14 @@ li,
 .content-video-slider.owl-theme .owl-dots .owl-dot.active span {
     background: rgba(0, 0, 0, .55);
     transform: scale(1.15);
+}
+
+
+
+/* ==================   
+    FOOTER */
+/* logo size */
+.main-footer .logo img{
+    max-width: 200px;
+    height: auto;
 }

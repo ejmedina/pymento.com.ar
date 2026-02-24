@@ -9,31 +9,31 @@ $services = [
 		"image" => $base_url . "/images/img-pymento/service-marketing-1.webp",
 		"excerpt" => "Estrategia, campañas y optimización para atraer clientes y convertir mejor.",
 		"paragraphs" => [
-			"Definimos tu propuesta de valor, el mensaje y el canal correcto para llegar al público ideal.",
-			"Medimos, iteramos y optimizamos para que la inversión se traduzca en resultados."
+			"Auditamos tu situación actual (web, campañas y analítica) y definimos propuesta de valor, audiencias y mensajes.",
+			"Implementamos medición desde el día 1 (eventos, conversiones y reportes) y optimizamos semanalmente con tests y mejoras."
 		],
 		],
 		"feature_twos" => [
 		[
 			"icon" => $base_url . "/images/icons/feature-6.png",
-			"heading" => "Estrategia clara",
-			"text" => "Objetivos, audiencias y embudo definidos para ejecutar con foco."
+			"heading" => "Estrategia y canal correcto",
+			"text" => "Propuesta de valor + mensajes + plan de canales."
 		],
 		[
 			"icon" => $base_url . "/images/icons/feature-7.png",
-			"heading" => "Optimización continua",
-			"text" => "A/B tests, medición y mejoras constantes para convertir más."
+			"heading" => "Medición y optimización semanal",
+			"text" => "Setup de tracking + A/B tests + mejoras continuas para convertir más."
 		],
 		],
 		"mid" => [
 		"image" => $base_url . "/images/img-pymento/service-marketing-2.webp",
-		"heading" => "Campañas que generan demanda",
-		"text" => "Planificamos y ejecutamos acciones alineadas a tu negocio para generar crecimiento sostenido."
+		"heading" => "Campañas con objetivos y medición desde el día 1",
+		"text" => "Planificamos, ejecutamos y ajustamos con métricas claras para que la inversión se traduzca en resultados."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Implementación\nrápida"],
-		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Métricas\nclaras"],
-		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Mejoras\nconstantes"],
+		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Tracking\nrápida"],
+		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Tests\nclaras"],
+		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Resultados\nconstantes"],
 		],
 	],
 
@@ -44,29 +44,29 @@ $services = [
 		"image" => $base_url . "/images/img-pymento/service-consultoria-1.webp",
 		"excerpt" => "Diagnóstico y planificación para ordenar procesos y acelerar resultados.",
 		"paragraphs" => [
-			"Analizamos tu operación, detectamos cuellos de botella y priorizamos acciones de alto impacto.",
-			"Te acompañamos con un plan claro, medible y ejecutable por etapas."
+			"Mapeamos procesos, detectamos fricciones y priorizamos acciones por impacto vs esfuerzo.",
+			"Definimos un roadmap por etapas (30/60/90 días) con responsables, métricas y seguimiento."
 		],
 		],
 		"feature_twos" => [
 		[
 			"icon" => $base_url . "/images/icons/feature-6.png",
-			"heading" => "Diagnóstico y foco",
-			"text" => "Entendemos el problema real y definimos prioridades sin dispersión."
+			"heading" => "Mapa de procesos + foco",
+			"text" => "Identificamos cuellos de botella y definimos prioridades sin dispersión."
 		],
 		[
 			"icon" => $base_url . "/images/icons/feature-7.png",
 			"heading" => "Roadmap accionable",
-			"text" => "Un plan por etapas con tiempos, responsables y métricas."
+			"text" => "Plan por etapas con objetivos, tiempos y métricas para ejecutar."
 		],
 		],
 		"mid" => [
 		"image" => $base_url . "/images/img-pymento/service-consultoria-2.webp",
-		"heading" => "Decisiones basadas en datos",
-		"text" => "Definimos KPIs, armamos tableros y te ayudamos a medir para decidir mejor."
+		"heading" => "KPIs y tablero mínimo",
+		"text" => "Definimos indicadores clave y armamos un tablero simple para decidir con datos y mejorar con continuidad."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Procesos\nordenados"],
+		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Impacto\nordenados"],
 		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Objetivos\nmedibles"],
 		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Acompañamiento\ncercano"],
 		],
@@ -79,31 +79,31 @@ $services = [
 		"image" => $base_url . "/images/img-pymento/service-desarrollo-1.webp",
 		"excerpt" => "Software a medida, automatizaciones e integraciones pensadas para tu operación.",
 		"paragraphs" => [
-			"Construimos soluciones que se adaptan a tu flujo de trabajo, no al revés.",
-			"Integramos sistemas, reducimos tareas manuales y mejoramos la trazabilidad."
+			"Diseñamos soluciones que se adaptan a tu flujo de trabajo, con foco en eficiencia y trazabilidad.",
+			"Integramos tus herramientas (CRM, WhatsApp, email, pagos, etc.) para reducir tareas manuales y errores."
 		],
 		],
 		"feature_twos" => [
 		[
 			"icon" => $base_url . "/images/icons/feature-6.png",
 			"heading" => "A medida y escalable",
-			"text" => "Diseño modular para crecer sin re-hacer todo de cero."
+			"text" => "Arquitectura modular para crecer sin rehacer todo desde cero."
 		],
 		[
 			"icon" => $base_url . "/images/icons/feature-7.png",
 			"heading" => "Integraciones reales",
-			"text" => "APIs, automatizaciones y conexiones con tus herramientas actuales."
+			"text" => "APIs y automatizaciones con CRM, WhatsApp, email, pagos y más."
 		],
 		],
 		"mid" => [
 		"image" => $base_url . "/images/img-pymento/service-desarrollo-2.webp",
-		"heading" => "De la idea a producción",
-		"text" => "Prototipamos rápido, validamos con vos y entregamos iterando con calidad."
+		"heading" => "Del prototipo a producción",
+		"text" => "Prototipamos rápido, validamos con vos y llevamos a producción con documentación y soporte."
 		],
 		"feature_threes" => [
 		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Automatización\nde tareas"],
 		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Integración\ncon sistemas"],
-		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Soporte y\nmejoras"],
+		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Documentación\ny soporte"],
 		],
 	],
 
@@ -114,20 +114,20 @@ $services = [
 		"image" => $base_url . "/images/img-pymento/service-ia-1.webp",
 		"excerpt" => "Asistentes y automatizaciones con IA para escalar atención y ventas.",
 		"paragraphs" => [
-			"Implementamos flujos para responder más rápido, calificar consultas y liberar tiempo del equipo.",
-			"La IA se integra con tus canales y procesos, manteniendo control y trazabilidad."
+			"Diseñamos flujos conversacionales y automatizaciones para responder más rápido, calificar consultas y liberar tiempo del equipo.",
+			"Integramos la IA con tus canales y procesos, con control, trazabilidad y derivación a humano cuando hace falta."
 		],
 		],
 		"feature_twos" => [
 		[
 			"icon" => $base_url . "/images/icons/feature-6.png",
-			"heading" => "Atención 24/7",
-			"text" => "Respuestas consistentes, derivación inteligente y seguimiento."
+			"heading" => "Atención 24/7 con derivación",
+			"text" => "Respuestas consistentes, derivación inteligente y seguimiento post-consulta."
 		],
 		[
 			"icon" => $base_url . "/images/icons/feature-7.png",
 			"heading" => "Ventas asistidas",
-			"text" => "Calificación de leads, FAQs, objeciones y cierre con mejor experiencia."
+			"text" => "Califica leads, responde objeciones y mejora la experiencia hasta el cierre."
 		],
 		],
 		"mid" => [
@@ -136,9 +136,9 @@ $services = [
 		"text" => "Definimos límites, aprobaciones y métricas para que la IA sume sin sorpresas."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Respuestas\nmás rápidas"],
-		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Leads\nmejor calificados"],
-		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Menos carga\noperativa"],
+		["icon" => $base_url . "/images/icons/service-35.png", "text" => "FAQ +\nderivación"],
+		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Leads\ncalificados"],
+		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Resumen +\nCRM"],
 		],
 	],
 
@@ -147,51 +147,51 @@ $services = [
 		"page_title" => "Servicios | Content Factory",
 		"hero" => [
 		"image" => $base_url . "/images/img-pymento/service-content-1.webp",
-		"excerpt" => "Videos realistas para campañas usando modelos generados con IA.",
+		"excerpt" => "Videos de anuncios con modelos IA: realistas, consistentes y escalables.",
 		"paragraphs" => [
-			"Creamos piezas para marketing online con modelos humanos generados con IA: realistas, consistentes y listos para escalar.",
-			"Esto reduce costos y tiempos de jornadas de filmación, sin perder calidad visual.",
-			"Ofrecemos distintos modelos y paquetes de videos según tu marca, producto o servicio."
+			"Creamos piezas para marketing online usando modelos humanos generados con IA: realistas, consistentes y listos para producir variaciones por campaña.",
+			"Reducís costos y tiempos de producción sin resignar calidad visual.",
+			"Entregamos guion, subtítulos y versiones en formatos para Reels/TikTok/Stories/Shorts, con rondas de revisión incluidas."
 		],
 		],
 		"feature_twos" => [
 		[
 			"icon" => $base_url . "/images/icons/feature-6.png",
-			"heading" => "Estrategia de contenidos",
-			"text" => "Calendario, formatos y mensajes para cada etapa del embudo."
+			"heading" => "Guion + subtítulos",
+			"text" => "Armamos el mensaje, el hook y el CTA según tu oferta y el canal."
 		],
 		[
 			"icon" => $base_url . "/images/icons/feature-7.png",
-			"heading" => "Producción constante",
-			"text" => "Piezas listas para publicar: textos, creatividades y variantes."
+			"heading" => "Variantes por campaña",
+			"text" => "3–10 versiones por segmento/oferta/CTA, listas para testear performance."
 		],
 		],
 		"mid" => [
 		"image" => $base_url . "/images/img-pymento/service-content-2.webp",
-		"heading" => "Coherencia y calidad",
-		"text" => "Mantenemos una línea clara de marca para que todo lo que publiques sume."
+		"heading" => "Consistencia visual de marca",
+		"text" => "Mantenemos estética y tono para que cada pieza sume a tu identidad y mejore resultados."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Calendario\nmensual"],
-		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Piezas\nlistas"],
-		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Optimización\npor performance"],
+		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Formatos\nverticales"],
+		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Variantes\npor test"],
+		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Revisión\ny ajuste"],
 		],
 	],
 ];
 
 $video_files = [
-	['file' => 'demo-1.mp4', 'poster' => 'video-poster-1.webp', 'client' => 'Autoelevadores DG', 'desc' => 'Campaña de adquisición de clientes'],
-	['file' => 'demo-2.mp4', 'poster' => 'video-poster-2.jpg', 'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
-	['file' => 'demo-3.mp4', 'poster' => 'video-poster-3.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
-	['file' => 'demo-4.mp4', 'poster' => 'video-poster-4.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
-	['file' => 'demo-5.mp4', 'poster' => 'video-poster-5.webp',  'client' => 'PGI Argentina', 'desc' => 'Campaña de adquisición de clientes'],
-	['file' => 'demo-6.mp4', 'poster' => 'video-poster-6.webp',  'client' => 'Ahorro Inteligente', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'qFtI8OXGoaA', 'poster' => 'video-poster-1.webp', 'client' => 'Autoelevadores DG', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'ZEubnhnv_GM', 'poster' => 'video-poster-2.jpg', 'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => '-pCiJTNb4kI', 'poster' => 'video-poster-3.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'gNoGu_P7qwg', 'poster' => 'video-poster-4.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'mKyJitK2drg', 'poster' => 'video-poster-5.webp',  'client' => 'PGI Argentina', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'ZsbQKMs0wo4', 'poster' => 'video-poster-6.webp',  'client' => 'Ahorro Inteligente', 'desc' => 'Campaña de adquisición de clientes'],
 ];
 
 $content_videos = array_map(function($v) use ($base_url) {
 	return [
-		'src'    => $base_url . "/videos/" . $v['file'],
-		'poster' => $base_url . "/images/img-pymento/" . $v['poster'],
+		'yt'    => $v['yt'], // ID DE YOUTUBE
+		'poster' => $base_url . "/images/img-pymento/" . ($v['poster'] ?? ''),
 		'client' => $v['client'] ?? '',
 		'desc' => $v['desc'] ?? '',
 	];
@@ -255,12 +255,14 @@ include __DIR__ . '/../partials/header.php';
 							<!-- Contact Widget -->
 							<div class="sidebar-widget contact-widget">
 								<div class="widget-content" style="background-image:url(<?= $base_url ?>/images/img-pymento/service-contact.jpg)">
-									<div class="title">Contactanos ahora por</div>
-									<div class="help">Cualquier Consulta!</div>
+									<div class="title">Contános qué necesitás</div>
+									<div class="help">Te brindamos una solución</div>
 									<a class="phone" href="tel:+557-3452-234">557-3452-234</a>
-									<div class="form">O podes llenar el form y nos pondremos en contacto:</div>
+									<div class="form">
+										Contanos brevemente qué necesitás y te respondemos con una propuesta clara, incluyendo alcance, tiempos y costos.
+									</div>
 									<div class="button-box text-center">
-										<a href="#">Contactarme<span class="fa-solid fa-link fa-fw"></span></a>
+										<a href="#">Escribinos por WhatsApp<span class="fa-brands fa-whatsapp"></span></a>
 									</div>
 								</div>
 							</div>
@@ -353,34 +355,22 @@ include __DIR__ . '/../partials/header.php';
 												<div class="content-video-slide" data-pos="<?= (int)$i ?>">
 												
 													<div class="phone">
-														<video
-															class="phone__video"
-															playsinline
-															preload="none"
-															disablepictureinpicture
-															controlslist="nofullscreen noremoteplayback nodownload"
-															poster="<?= htmlspecialchars($v["poster"] ?? "") ?>"
-															data-src="<?= htmlspecialchars($v["src"]) ?>"
-														></video>
+														<div class="phone__screen" style="background-image:url('<?= htmlspecialchars($v['poster'] ?? '') ?>')">
+															<div
+																class="phone__player"
+																data-yt-id="<?= htmlspecialchars($v['yt']) ?>"
+																aria-label="Video YouTube"
+															></div>
+														</div>
 
-														<!-- overlay play (solo cuando está pausado) -->
+														<!-- overlay play (solo hasta que se cree el iframe) -->
 														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
 															<span class="phone__play"></span>
 														</button>
-
-														<!-- barra de progreso custom -->
-														<div class="phone__progress" aria-label="Progreso del video">
-															<input class="phone__seek" type="range" min="0" max="1000" value="0" step="1">
-															<div class="phone__time">
-																<span class="phone__tcur">0:00</span>
-																<span class="phone__tsep">/</span>
-																<span class="phone__tdur">0:00</span>
-															</div>
-														</div>
 													</div>
 
 													<?php if (!empty($v['client'])): ?>
-														<h4>Cliente: <?= htmlspecialchars($v['client']) ?></h4>
+														<div class="video-client">Cliente: <?= htmlspecialchars($v['client']) ?></div>
 													<?php endif; ?>
 
 													<?php if (!empty($v['desc'])): ?>

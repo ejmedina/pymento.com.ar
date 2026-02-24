@@ -8,6 +8,7 @@
 	<link href="<?= $base_url ?>/css/style.css" rel="stylesheet">
 	<link href="<?= $base_url ?>/css/responsive.css" rel="stylesheet">
 
+
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -16,6 +17,8 @@
 
 	<link rel="shortcut icon" href="<?= $base_url ?>/images/img-pymento/favicon-256.png" type="image/x-icon">
 	<link rel="icon" href="<?= $base_url ?>/images/img-pymento/favicon-256.png" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 	<!-- Responsive -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,33 +36,7 @@
     <div class="preloader"></div>
 	<!-- End Preloader -->
 	<!-- Main Header / Header Style Two -->
-    <header class="main-header header-style-two">
-
-		<!-- Header Top -->
-		<div class="header-top_two" hidden>
-			<div class="auto-container">
-				<div class="d-flex justify-content-center align-items-center flex-wrap">
-					
-					<!-- Info List -->
-					<ul class="info-list">
-						<li><a href="#"><span class="icon fa-solid fa-phone fa-fw"></span>(678) 345-3456</a></li>
-						<li><a href="#"><span class="icon fa-solid fa-envelope fa-fw"></span>envato@mail.com</a></li>
-						<li><a href="#"><span class="icon fa-solid fa-map fa-fw"></span>380 Albert St, Melbourne, Australia</a></li>
-					</ul>
-					
-					<!-- Social Box -->
-					<ul class="header-social_box">
-						<li><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw"></a></li>
-						<li><a href="https://www.facebook.com/" class="fa-brands fa-twitter fa-fw"></a></li>
-						<li><a href="https://www.linkedin.com/" class="fa-brands fa-linkedin fa-fw"></a></li>
-						<li><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw"></a></li>
-					</ul>
-					
-				</div>
-			</div>
-		</div>
-		<!-- End Header Top -->
-		
+    <header class="main-header header-style-two">		
 		<!-- Header Upper -->
         <div class="header-upper">
             <div class="auto-container">
@@ -110,7 +87,6 @@
 										<?php if ($nav_variant === "home"): ?>
                                             <li><a href="#testimonial">Testimonios</a></li>
                                         <?php endif; ?>
-										<li><a href="<?= $base_url ?>/contact.php/">Contacto</a></li>
 									</ul>
 								</div>
 								

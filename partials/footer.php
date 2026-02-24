@@ -1,5 +1,5 @@
     <!-- Footer -->
-	<footer class="main-footer" style="background-image:url(images/background/pattern-11.png)">
+	<footer class="main-footer" style="background-image:url(<?= $base_url ?>/images/background/pattern-11.png)">
 		<div class="auto-container">
 
 			<!-- Widgets Section -->
@@ -21,7 +21,7 @@
 							</div>
 
 							<a href="contact.html" class="theme-btn about-btn">
-								Contactate
+								Contactarme
 							</a>
 						</div>
 					</div>
@@ -34,7 +34,6 @@
 								<li><a href="index.html">Inicio</a></li>
 								<li><a href="#servicios">Servicios</a></li>
 								<li><a href="about.html">Nosotros</a></li>
-								<li><a href="contact.html">Contacto</a></li>
 							</ul>
 						</div>
 					</div>
@@ -111,6 +110,7 @@
 
 <script src="<?= $base_url ?>/js/script.js"></script>
 
+<script src="https://www.youtube.com/iframe_api"></script> <!-- Agregamos la API de youtube -->
 <script src="<?= $base_url ?>/js/custom.js"></script> <!-- Nuestro archivo JS -->
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
