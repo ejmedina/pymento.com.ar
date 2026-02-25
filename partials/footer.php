@@ -46,7 +46,7 @@
 							<ul class="contact-list">
 								<li>
 									<span class="icon fa fa-envelope"></span>
-									hola@pymento.com.ar
+									consultas@pymento.com.ar (no funcional por el momento)
 								</li>
 								<li>
 									<span class="icon fa fa-phone"></span>
