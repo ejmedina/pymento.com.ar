@@ -20,6 +20,35 @@ li,
     text-transform: none !important;
 }
 
+:root {
+    /* Elegimos 2 colores base del gradiente */
+    /* Colores principales de marca */
+    --color-primary: #7114EF;
+    --color-secondary: #1475F7;
+
+    /* Gradiente principal */
+    --color-gradient: linear-gradient(
+        to bottom,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+
+    /* Opcional: gradiente alternativo */
+    --color-gradient-diagonal: linear-gradient(
+        to top left,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+    
+
+    /* Usamos las variantes que usa el template */
+    --color-thirtythree: var(--color-primary);
+    --color-thirtytwo: var(--color-secondary);
+
+    /* Colores “solid” que usa en hover/active */
+    --main-color: var(--color-secondary);
+}
+
 /* INDEX
     ======================= */
 
@@ -31,24 +60,9 @@ li,
 
 /* Activamos el gradiente vertical en el fondo del logo */
 .header-style-two .logo:before {
-    background-image: linear-gradient(to bottom, #7114EF, #1475F7) !important;
-}
+    background-image: var(--color-gradient) !important;}
 
 
-:root {
-    /* Elegimos 2 colores base del gradiente */
-    --py-start: #7114EF;
-    --py-end: #1475F7;
-
-    /* Usamos las variantes que usa el template */
-    --color-thirtythree: var(--py-start);
-    --color-thirtytwo: var(--py-end);
-
-    /* Colores “solid” que usa en hover/active */
-    --main-color: var(--py-end);
-
-    --py-gradient: linear-gradient(to top left, var(--py-start) 0%, var(--py-end) 100%);
-}
 
 /* HERO SLIDER (slider-two) - Mobile: ocultar flechas, mostrar dots */
 @media (max-width: 767px) {
@@ -99,6 +113,26 @@ li,
 .content-factory-icon {
     transform: scale(1.25);
     transform-origin: center;
+}
+
+/* mismo tamaño de tarjetas */
+/* INDEX Servicios: igualar altura de tarjetas */
+.services-one .four-item-carousel .owl-stage {
+    display: flex;
+}
+
+.services-one .four-item-carousel .owl-item {
+    display: flex;
+}
+
+.services-one .four-item-carousel .service-block_three,
+.services-one .four-item-carousel .service-block_three-inner {
+    height: 100%;
+}
+
+.services-one .four-item-carousel .service-block_three-inner {
+    width: 100%;
+    padding: 0px 20px 0px;
 }
 
 /* NUESTROS CLIENTES */
@@ -182,7 +216,7 @@ li,
     color: var(--white-color);
     background-color: var(--main-color);
     /* fallback */
-    background-image: var(--py-gradient);
+    background-image: var(--color-gradient);
     /* el gradiente “oficial” */
     border-color: var(--main-color);
 }
@@ -230,6 +264,22 @@ li,
     background: linear-gradient(to left, #25D366 0%, #128C7E 100%);
 }
 
+/* Seccion de tarjetas negra scon misma altura */
+/* 1) que las columnas se estiren a la misma altura */
+.service-detail .row.clearfix{
+    align-items: stretch;
+}
+
+/* 2) que el wrapper de cada card ocupe todo el alto de la columna */
+.service-detail .feature-two{
+    display: flex;
+}
+
+/* 3) que el fondo (inner) tome todo el alto */
+.service-detail .feature-two_inner{
+    width: 100%;
+    height: 100%;
+}
 
 /* SECCION CONTENT FACTORY 
     ==================== */
@@ -445,14 +495,6 @@ li,
     z-index: 3;
 }
 
-/* .phone__video {
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    border-radius: 34px;
-    display: block;
-    background: #000;
-} */
-
 /* tap overlay */
 .phone__tap {
     position: absolute;
@@ -490,44 +532,6 @@ li,
     border-left: 18px solid rgba(255, 255, 255, .92);
 }
 
-/* barra */
-/* .phone__progress {
-    position: absolute;
-    left: 18px;
-    right: 18px;
-    bottom: 16px;
-    z-index: 5;
-    display: grid;
-    gap: 8px;
-} */
-
-/* .phone__seek {
-    width: 100%;
-    -webkit-appearance: none;
-    appearance: none;
-    height: 4px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .22);
-    outline: none;
-}
-
-.phone__seek::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 14px;
-    height: 14px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .92);
-} */
-
-/* .phone__time {
-    display: flex;
-    justify-content: flex-end;
-    gap: 6px;
-    font-size: 12px;
-    color: rgba(255, 255, 255, .85);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, .45);
-} */
 
 /* estado reproduciendo: esconder play */
 .phone.is-playing .phone__play {
@@ -537,7 +541,7 @@ li,
 /* Achicamos los costados  */
 .content-video-slider .owl-item .content-video-slide {
     opacity: 0.55;
-    transform: scale(.94);
+    transform: scale(.60);
     transition: transform .25s ease, opacity .25s ease;
 }
 

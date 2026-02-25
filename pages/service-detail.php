@@ -20,7 +20,7 @@ $services = [
 			"text" => "Propuesta de valor + mensajes + plan de canales."
 		],
 		[
-			"icon" => $base_url . "/images/icons/feature-7.png",
+			"icon" => $base_url . "/images/icons/service-21.png",
 			"heading" => "Medición y optimización semanal",
 			"text" => "Setup de tracking + A/B tests + mejoras continuas para convertir más."
 		],
@@ -31,9 +31,9 @@ $services = [
 		"text" => "Planificamos, ejecutamos y ajustamos con métricas claras para que la inversión se traduzca en resultados."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Tracking\nrápida"],
-		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Tests\nclaras"],
-		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Resultados\nconstantes"],
+		["icon" => $base_url . "/images/icons/service-3.png", "text" => "Tracking\nrápido"],
+		["icon" => $base_url . "/images/icons/service-2.png", "text" => "Tests\nclaros"],
+		["icon" => $base_url . "/images/icons/counter-3.png", "text" => "Resultados\nconstantes"],
 		],
 	],
 
@@ -55,7 +55,7 @@ $services = [
 			"text" => "Identificamos cuellos de botella y definimos prioridades sin dispersión."
 		],
 		[
-			"icon" => $base_url . "/images/icons/feature-7.png",
+			"icon" => $base_url . "/images/icons/service-18.2.png",
 			"heading" => "Roadmap accionable",
 			"text" => "Plan por etapas con objetivos, tiempos y métricas para ejecutar."
 		],
@@ -66,9 +66,9 @@ $services = [
 		"text" => "Definimos indicadores clave y armamos un tablero simple para decidir con datos y mejorar con continuidad."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Impacto\nordenados"],
-		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Objetivos\nmedibles"],
-		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Acompañamiento\ncercano"],
+		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Impactos\nordenados"],
+		["icon" => $base_url . "/images/icons/service-3.png", "text" => "Objetivos\nmedibles"],
+		["icon" => $base_url . "/images/icons/service-6.png", "text" => "Acompañamiento\ncercano"],
 		],
 	],
 
@@ -85,12 +85,12 @@ $services = [
 		],
 		"feature_twos" => [
 		[
-			"icon" => $base_url . "/images/icons/feature-6.png",
+			"icon" => $base_url . "/images/icons/service-5.2.png",
 			"heading" => "A medida y escalable",
 			"text" => "Arquitectura modular para crecer sin rehacer todo desde cero."
 		],
 		[
-			"icon" => $base_url . "/images/icons/feature-7.png",
+			"icon" => $base_url . "/images/icons/service-4.2.png",
 			"heading" => "Integraciones reales",
 			"text" => "APIs y automatizaciones con CRM, WhatsApp, email, pagos y más."
 		],
@@ -101,14 +101,14 @@ $services = [
 		"text" => "Prototipamos rápido, validamos con vos y llevamos a producción con documentación y soporte."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Automatización\nde tareas"],
-		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Integración\ncon sistemas"],
-		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Documentación\ny soporte"],
+		["icon" => $base_url . "/images/icons/service-33.png", "text" => "Automatización\nde tareas"],
+		["icon" => $base_url . "/images/icons/service-32.png", "text" => "Integración\ncon sistemas"],
+		["icon" => $base_url . "/images/icons/service-3.png", "text" => "Documentación\ny soporte"],
 		],
 	],
 
 	"ia" => [
-		"title" => "IA aplicada a soporte/ventas",
+		"title" => "IA aplicada a soporte / ventas",
 		"page_title" => "Servicios | IA aplicada a soporte y ventas",
 		"hero" => [
 		"image" => $base_url . "/images/img-pymento/service-ia-1.webp",
@@ -136,9 +136,9 @@ $services = [
 		"text" => "Definimos límites, aprobaciones y métricas para que la IA sume sin sorpresas."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "FAQ +\nderivación"],
-		["icon" => $base_url . "/images/icons/service-36.png", "text" => "Leads\ncalificados"],
-		["icon" => $base_url . "/images/icons/service-37.png", "text" => "Resumen +\nCRM"],
+		["icon" => $base_url . "/images/icons/service-11-1.png", "text" => "FAQ +\nderivación"],
+		["icon" => $base_url . "/images/icons/service-32.png", "text" => "Leads\ncalificados"],
+		["icon" => $base_url . "/images/icons/service-10-1.png", "text" => "Resumen +\nCRM"],
 		],
 	],
 

@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             768: {
                 items: 2,
-                margin: -100,
+                margin: -200,
                 stagePadding: 0
             }
         }
