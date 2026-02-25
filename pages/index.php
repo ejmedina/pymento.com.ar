@@ -31,8 +31,8 @@ include __DIR__ . '/../partials/header.php';
 							<div class="slider-two_button-box">
 								<a class="btn-style-two theme-btn btn-item" href="#">
 									<div class="btn-wrap">
-										<span class="text-one">Conocer nuestros servicios<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-										<span class="text-two">Conocer nuestros servicios<i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										<span class="text-one">Conocé más<i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										<span class="text-two">Conocé más<i class="fa-solid fa-arrow-right fa-fw"></i></span>
 									</div>
 								</a>
 							</div>
