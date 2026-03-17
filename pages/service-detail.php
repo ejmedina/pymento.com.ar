@@ -257,12 +257,21 @@ include __DIR__ . '/../partials/header.php';
 								<div class="widget-content" style="background-image:url(<?= $base_url ?>/images/img-pymento/service-contact.jpg)">
 									<div class="title">Contános qué necesitás</div>
 									<div class="help">Te brindamos una solución</div>
-									<a class="phone" href="tel:+557-3452-234">557-3452-234</a>
 									<div class="form">
 										Contanos brevemente qué necesitás y te respondemos con una propuesta clara, incluyendo alcance, tiempos y costos.
 									</div>
 									<div class="button-box text-center">
-										<a href="#">Escribinos por WhatsApp<span class="fa-brands fa-whatsapp"></span></a>
+										<?php
+											$wa_number = "5491160572691";
+
+											$service_title = $services[$service_key]["title"] ?? "PyMENTO";
+
+											$wa_text = "Hola! Quisiera consultar por el SERVICIO: {$service_title} y/o otros servicios que puedan llegar a interesarme!";
+											$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+										?>
+											<a href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
+												Escribinos por WhatsApp <span class="fa-brands fa-whatsapp"></span>
+											</a>
 									</div>
 								</div>
 							</div>

@@ -29,7 +29,12 @@ include __DIR__ . '/../partials/header.php';
 							</div>
 							<!-- Button Box -->
 							<div class="slider-two_button-box">
-								<a class="btn-style-two theme-btn btn-item" href="#">
+								<?php
+								$wa_number = "5491160572691";
+								$wa_text = "Hola! Me interesa conocer mas sobre el SERVICIO: Tecnologia aplicada y/o otros servicios que puedan llegar a interesarme!";
+								$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+								?>
+								<a class="btn-style-two theme-btn btn-item" href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 									<div class="btn-wrap">
 										<span class="text-one">Conocé más<i class="fa-solid fa-arrow-right fa-fw"></i></span>
 										<span class="text-two">Conocé más<i class="fa-solid fa-arrow-right fa-fw"></i></span>
@@ -58,7 +63,12 @@ include __DIR__ . '/../partials/header.php';
 							</div>
 							<!-- Button Box -->
 							<div class="slider-two_button-box">
-								<a class="btn-style-two theme-btn btn-item" href="#">
+								<?php
+								$wa_number = "5491160572691";
+								$wa_text = "Hola! Me interesa conocer mas sobre el SERVICIO: Marketing y Adquisicion y/o otros servicios que puedan llegar a interesarme!";
+								$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+								?>
+								<a class="btn-style-two theme-btn btn-item" href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 									<div class="btn-wrap">
 										<span class="text-one">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
 										<span class="text-two">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
@@ -88,7 +98,12 @@ include __DIR__ . '/../partials/header.php';
 							</div>
 							<!-- Button Box -->
 							<div class="slider-two_button-box">
-								<a class="btn-style-two theme-btn btn-item" href="#">
+								<?php
+								$wa_number = "5491160572691";
+								$wa_text = "Hola! Me interesa conocer mas sobre el SERVICIO: IA aplicada y/o otros servicios que puedan llegar a interesarme!";
+								$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+								?>
+								<a class="btn-style-two theme-btn btn-item" href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 									<div class="btn-wrap">
 										<span class="text-one">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
 										<span class="text-two">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
@@ -251,7 +266,12 @@ include __DIR__ . '/../partials/header.php';
 						</div>
 						
 						<div class="d-flex flex-wrap">
-							<a class="btn-style-three theme-btn btn-item" href="#">
+							<?php
+							$wa_number = "5491160572691";
+							$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+							$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+							?>
+							<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 								<div class="btn-wrap">
 									<span class="text-one">Hablemos de tu proyecto <i class="fa-solid fa-arrow-right fa-fw"></i></span>
 									<span class="text-two">Hablemos de tu proyecto <i class="fa-solid fa-arrow-right fa-fw"></i></span>
@@ -545,7 +565,12 @@ include __DIR__ . '/../partials/header.php';
 				</div>
 
 				<div class="right-box">
-					<a class="cta-one_btn theme-btn" href="contact.html">Contactarme</a>
+					<?php
+					$wa_number = "5491160572691";
+					$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+					$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+					?>
+					<a class="cta-one_btn theme-btn"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">Contactarme</a>
 				</div>
 
 			</div>

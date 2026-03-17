@@ -20,7 +20,12 @@
 								Software, automatización y estrategia digital para crecer con orden.
 							</div>
 
-							<a href="contact.html" class="theme-btn about-btn">
+							<?php
+							$wa_number = "5491160572691";
+							$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+							$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+							?>
+							<a class="theme-btn about-btn"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 								Contactarme
 							</a>
 						</div>
