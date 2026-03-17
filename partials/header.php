@@ -95,7 +95,12 @@
 							
 							<div class="outer-box d-flex align-items-center">								
 								<div class="button-box">
-									<a class="btn-style-three theme-btn btn-item" href="#">
+									<?php
+									$wa_number = "5491160572691";
+									$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+									$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+									?>
+									<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 										<div class="btn-wrap">
 											<span class="text-one">Contactarme<i class="fa-solid fa-arrow-right fa-fw"></i></span>
 											<span class="text-two">Contactarme<i class="fa-solid fa-arrow-right fa-fw"></i></span>
@@ -140,7 +145,12 @@
 						<div class="outer-box d-flex align-items-center">
 							
 							<div class="button-box">
-								<a class="btn-style-three theme-btn btn-item" href="#">
+								<?php
+								$wa_number = "5491160572691";
+								$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+								$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+								?>
+								<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 									<div class="btn-wrap">
 										<span class="text-one">Contactarme<i class="fa-solid fa-arrow-right fa-fw"></i></span>
 										<span class="text-two">Contactarme<i class="fa-solid fa-arrow-right fa-fw"></i></span>
