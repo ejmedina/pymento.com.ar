@@ -80,7 +80,7 @@
 												<li><a href="<?= $base_url ?>/servicios/marketing/">Marketing y Adquisición</a></li>
 												<li><a href="<?= $base_url ?>/servicios/consultoria/">Consultoría en negocios</a></li>
 												<li><a href="<?= $base_url ?>/servicios/desarrollo/">Desarrollos y soluciones</a></li>
-												<li><a href="<?= $base_url ?>/servicios/ia/">IA aplicada a soporte/ventas</a></li>
+												<li><a href="<?= $base_url ?>/servicios/ia/">IA aplicada a soporte y ventas</a></li>
 												<li><a href="<?= $base_url ?>/servicios/content/">Content Factory</a></li>
 											</ul>
 										</li>
@@ -97,7 +97,7 @@
 								<div class="button-box">
 									<?php
 									$wa_number = "5491160572691";
-									$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+									$wa_text = WA_GENERIC_TEXT;
 									$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
 									?>
 									<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
@@ -147,7 +147,7 @@
 							<div class="button-box">
 								<?php
 								$wa_number = "5491160572691";
-								$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+								$wa_text = WA_GENERIC_TEXT;
 								$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
 								?>
 								<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">

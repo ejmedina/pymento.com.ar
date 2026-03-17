@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../constants.php';
 require_once __DIR__ . '/../config.php';
 
 $page_title = "PyMENTO | Soluciones tecnológicas para PyMES y Startups";
@@ -11,6 +12,41 @@ include __DIR__ . '/../partials/header.php';
 	<!-- Main Slider -->
 	<section class="slider-two">
 		<div class="single-item-carousel owl-carousel owl-theme">
+
+		<!-- Slide -->
+			<div class="slide">
+				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-ia.webp)"></div>
+				<div class="slider-two_pattern-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/pattern-1.png)"></div>
+				<div class="auto-container">
+					
+					<!-- Content Column -->
+					<div class="slider-two-content">
+						<div class="slider-two_inner">
+							<div class="slider-two_title">IA aplicada a soporte y ventas</div>
+							<h1 class="slider-two_heading">Automatizá tu atención al cliente y ventas con IA</h1>
+							<div class="slider-two_text">
+								Implementamos asistentes inteligentes conectados a WhatsApp, web y redes sociales para responder consultas, 
+								calificar clientes y reducir carga operativa.
+							</div>
+							<!-- Button Box -->
+							<div class="slider-two_button-box">
+								<?php
+								// $wa_number = "5491160572691";
+								// $wa_text = WA_IA;
+								// $wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+								?>
+								<a class="btn-style-two theme-btn btn-item" href="<?= $base_url ?>/servicios/ia/" target="_blank" rel="noopener">
+									<div class="btn-wrap">
+										<span class="text-one">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										<span class="text-two">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
 			
 			<!-- Slide -->
 			<div class="slide">
@@ -29,12 +65,7 @@ include __DIR__ . '/../partials/header.php';
 							</div>
 							<!-- Button Box -->
 							<div class="slider-two_button-box">
-								<?php
-								$wa_number = "5491160572691";
-								$wa_text = "Hola! Me interesa conocer mas sobre el SERVICIO: Tecnologia aplicada y/o otros servicios que puedan llegar a interesarme!";
-								$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
-								?>
-								<a class="btn-style-two theme-btn btn-item" href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
+								<a class="btn-style-two theme-btn btn-item" href="<?= $base_url ?>/servicios/consultoria/" target="_blank" rel="noopener">
 									<div class="btn-wrap">
 										<span class="text-one">Conocé más<i class="fa-solid fa-arrow-right fa-fw"></i></span>
 										<span class="text-two">Conocé más<i class="fa-solid fa-arrow-right fa-fw"></i></span>
@@ -63,47 +94,7 @@ include __DIR__ . '/../partials/header.php';
 							</div>
 							<!-- Button Box -->
 							<div class="slider-two_button-box">
-								<?php
-								$wa_number = "5491160572691";
-								$wa_text = "Hola! Me interesa conocer mas sobre el SERVICIO: Marketing y Adquisicion y/o otros servicios que puedan llegar a interesarme!";
-								$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
-								?>
-								<a class="btn-style-two theme-btn btn-item" href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
-									<div class="btn-wrap">
-										<span class="text-one">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-										<span class="text-two">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
-			<!-- Slide -->
-			<div class="slide">
-				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-ia.webp)"></div>
-				<div class="slider-two_pattern-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/pattern-1.png)"></div>
-				<div class="auto-container">
-					
-					<!-- Content Column -->
-					<div class="slider-two-content">
-						<div class="slider-two_inner">
-							<div class="slider-two_title">IA aplicada a soporte y ventas</div>
-							<h1 class="slider-two_heading">Automatizá tu atención al cliente y ventas con IA</h1>
-							<div class="slider-two_text">
-								Implementamos asistentes inteligentes conectados a WhatsApp, web y redes sociales para responder consultas, 
-								calificar clientes y reducir carga operativa.
-							</div>
-							<!-- Button Box -->
-							<div class="slider-two_button-box">
-								<?php
-								$wa_number = "5491160572691";
-								$wa_text = "Hola! Me interesa conocer mas sobre el SERVICIO: IA aplicada y/o otros servicios que puedan llegar a interesarme!";
-								$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
-								?>
-								<a class="btn-style-two theme-btn btn-item" href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
+								<a class="btn-style-two theme-btn btn-item" href="<?= $base_url ?>/servicios/marketing/" target="_blank" rel="noopener">
 									<div class="btn-wrap">
 										<span class="text-one">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
 										<span class="text-two">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
@@ -268,7 +259,7 @@ include __DIR__ . '/../partials/header.php';
 						<div class="d-flex flex-wrap">
 							<?php
 							$wa_number = "5491160572691";
-							$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+							$wa_text = WA_GENERIC_TEXT;
 							$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
 							?>
 							<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
@@ -379,7 +370,7 @@ include __DIR__ . '/../partials/header.php';
 							<span class="service-block_three-icon">
 								<img src="<?= $base_url ?>/images/icons/feature-4.png" alt="IA aplicada a soporte/ventas" />
 							</span>
-							<h5 class="service-block_three-heading">IA aplicada a soporte/ventas</h5>
+							<h5 class="service-block_three-heading">IA aplicada a soporte y ventas</h5>
 							<div class="service-block_three-text">
 								Asistentes y automatizaciones para escalar atención y ventas con control.
 							</div>
@@ -567,7 +558,7 @@ include __DIR__ . '/../partials/header.php';
 				<div class="right-box">
 					<?php
 					$wa_number = "5491160572691";
-					$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+					$wa_text = WA_GENERIC_TEXT;
 					$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
 					?>
 					<a class="cta-one_btn theme-btn"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">Contactarme</a>

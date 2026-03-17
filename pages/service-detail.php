@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../constants.php';
 require_once __DIR__ . '/../config.php';
 
 $services = [
@@ -108,7 +109,7 @@ $services = [
 	],
 
 	"ia" => [
-		"title" => "IA aplicada a soporte / ventas",
+		"title" => "IA aplicada a soporte y ventas",
 		"page_title" => "Servicios | IA aplicada a soporte y ventas",
 		"hero" => [
 		"image" => $base_url . "/images/img-pymento/service-ia-1.webp",
@@ -266,7 +267,7 @@ include __DIR__ . '/../partials/header.php';
 
 											$service_title = $services[$service_key]["title"] ?? "PyMENTO";
 
-											$wa_text = "Hola! Quisiera consultar por el SERVICIO: {$service_title} y/o otros servicios que puedan llegar a interesarme!";
+											$wa_text = "Hola! vi el SERVICIO: {$service_title} en su web (www.pymento.com.ar) y me interesa saber mas.";
 											$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
 										?>
 											<a href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
