@@ -22,7 +22,7 @@
 
 							<?php
 							$wa_number = "5491160572691";
-							$wa_text = "Hola! Me interesa conocer mas sobre sus servicios y coordinar una posible reunión.";
+							$wa_text = WA_GENERIC_TEXT;
 							$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
 							?>
 							<a class="theme-btn about-btn"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
