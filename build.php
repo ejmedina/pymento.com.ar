@@ -82,6 +82,18 @@ $routes = [
         'out'    => $dist . '/index.html',
         'get'    => [],
     ],
+    [
+        'pretty' => '/privacy-policy/',
+        'file'   => $root . '/pages/privacy-policy.php',
+        'out'    => $dist . '/privacy-policy/index.html',
+        'get'    => [],
+    ],
+    [
+        'pretty' => '/terms-of-service/',
+        'file'   => $root . '/pages/terms-of-service.php',
+        'out'    => $dist . '/terms-of-service/index.html',
+        'get'    => [],
+    ],
 ];
 
 // generar 1 página por servicio
