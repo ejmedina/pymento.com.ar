@@ -85,7 +85,7 @@
 											</ul>
 										</li>
 										<?php if ($nav_variant === "home"): ?>
-                                            <li><a href="#testimonial">Testimonios</a></li>
+                                            <!-- <li><a href="#testimonial">Testimonios</a></li> -->
                                         <?php endif; ?>
 									</ul>
 								</div>

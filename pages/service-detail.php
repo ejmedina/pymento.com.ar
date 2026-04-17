@@ -86,12 +86,12 @@ $services = [
 		],
 		"feature_twos" => [
 		[
-			"icon" => $base_url . "/images/icons/service-5.2.png",
+			"icon" => $base_url . "/images/icons/service-19.2.png",
 			"heading" => "A medida y escalable",
 			"text" => "Arquitectura modular para crecer sin rehacer todo desde cero."
 		],
 		[
-			"icon" => $base_url . "/images/icons/service-4.2.png",
+			"icon" => $base_url . "/images/icons/service-18.2.png",
 			"heading" => "Integraciones reales",
 			"text" => "APIs y automatizaciones con CRM, WhatsApp, email, pagos y más."
 		],
@@ -261,22 +261,30 @@ include __DIR__ . '/../partials/header.php';
 									<div class="form">
 										Contanos brevemente qué necesitás y te respondemos con una propuesta clara, incluyendo alcance, tiempos y costos.
 									</div>
-									<div class="button-box text-center">
+									<div class="contact-actions text-center">
 										<?php
 											$wa_number = "5491160572691";
-
 											$service_title = $services[$service_key]["title"] ?? "PyMENTO";
-
 											$wa_text = "Hola! vi el SERVICIO: {$service_title} en su web (www.pymento.com.ar) y me interesa saber mas.";
 											$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
 										?>
-											<a href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
-												Escribinos por WhatsApp <span class="fa-brands fa-whatsapp"></span>
+
+										<!-- WhatsApp -->
+										<a href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener" class="contact-link whatsapp-link">
+											WhatsApp <span class="fa-brands fa-whatsapp"></span>
+										</a>
+
+										<!-- Email -->
+										<div class="email-contact">
+											<span>Email:</span>
+											<a href="#" class="email-toggle" data-user="comercial" data-domain="pymento.com.ar">
+												[ Ver email ] <span class="fa-solid fa-envelope"></span>
 											</a>
+											<span class="copy-feedback" id="copyFeedback"></span>
+										</div>
 									</div>
 								</div>
 							</div>
-
 						</aside>
 					</div>
 
@@ -289,13 +297,17 @@ include __DIR__ . '/../partials/header.php';
 										<img src="<?= htmlspecialchars($services[$service_key]["hero"]["image"]) ?>" alt="" />
 									</div>
 
-									<h3><?= htmlspecialchars($services[$service_key]["title"]) ?></h3>
-									<p><?= htmlspecialchars($services[$service_key]["hero"]["excerpt"]) ?></p>
+									<!-- <h3><?= htmlspecialchars($services[$service_key]["title"]) ?></h3> -->
+									<ul class="service-bullets">
+										<li><p><?= htmlspecialchars($services[$service_key]["hero"]["excerpt"]) ?></p></li>
+									</ul>
 
 									<?php if (!empty($services[$service_key]["hero"]["paragraphs"])): ?>
-										<?php foreach ($services[$service_key]["hero"]["paragraphs"] as $p): ?>
-											<p><?= htmlspecialchars($p) ?></p>
-										<?php endforeach; ?>
+										<ul class="service-bullets">
+											<?php foreach ($services[$service_key]["hero"]["paragraphs"] as $p): ?>
+												<li><p><?= htmlspecialchars($p) ?></p></li>
+											<?php endforeach; ?>
+										</ul>
 									<?php endif; ?>
 
 
@@ -355,7 +367,7 @@ include __DIR__ . '/../partials/header.php';
 
 									<!-- Divider + título sección -->
 									<div class="content-works-divider content-works-divider--pill">
-										<h4 class="content-works-pill">Trabajos realizados</h4>
+										<h4 class="content-works-pill">Trabajos realizados a nuestros clientes</h4>
 									</div>
 
 									<!-- Slider videos estilo teléfono -->
@@ -399,27 +411,6 @@ include __DIR__ . '/../partials/header.php';
 			</div>
 		</div>
 		<!-- End Sidebar Page Container -->
-
-		<!-- CTA One -->
-		<section class="cta-one">
-			<div class="auto-container">
-				<div class="d-flex justify-content-between align-items-center flex-wrap">
-
-					<div class="left-box">
-						<h3 class="cta-one_heading">¿Listo para mejorar tu negocio con tecnología?</h3>
-						<div class="cta-one_text">
-							Te ayudamos a ordenar procesos, automatizar tareas y crecer con soluciones digitales pesadas para tu empresa.
-						</div>
-					</div>
-
-					<div class="right-box">
-						<a class="cta-one_btn theme-btn" href="contact.html">Contactate</a>
-					</div>
-
-				</div>
-			</div>
-		</section>
-		<!-- End CTA One -->
 
 <?php
 
