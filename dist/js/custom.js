@@ -195,3 +195,49 @@ document.addEventListener('DOMContentLoaded', () => {
         pauseAllPlayers(null);
     });
 });
+
+// Funcion para copiar mail en el portapapeles
+document.addEventListener("DOMContentLoaded", function () {
+
+    const emailToggle = document.querySelector(".email-toggle");
+    const feedback = document.getElementById("copyFeedback");
+
+    if (!emailToggle) return;
+
+    emailToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const user = this.dataset.user;
+        const domain = this.dataset.domain;
+        const email = user + "@" + domain;
+
+        // Reemplazar contenido
+        const container = this.parentElement;
+
+        container.innerHTML = `
+            <span>Email:</span>
+            <span class="email-value">${email}</span>
+            <a href="#" class="copy-email" data-email="${email}">Copiar</a>
+        `;
+
+        // Seleccionar nuevo botón copiar
+        const copyBtn = container.querySelector(".copy-email");
+
+        copyBtn.addEventListener("click", async function (e) {
+            e.preventDefault();
+
+            try {
+                await navigator.clipboard.writeText(email);
+
+                this.textContent = "Copiado ✓";
+
+                setTimeout(() => {
+                    this.textContent = "Copiar";
+                }, 2500);
+
+            } catch (err) {
+                console.error("Error al copiar:", err);
+            }
+        });
+    });
+});

@@ -43,7 +43,7 @@
 	margin-bottom:var(--margin-bottom-30);
 }
 
-.main-footer .logo-widget .about-btn{
+.main-footer .about-btn{
 	position: relative;
     padding: 9px 30px;
     font-weight: 700;
@@ -251,6 +251,8 @@
 	padding:18px 0px;
 	text-align:center;
 	border-top:1px solid rgba(255,255,255,0.10);
+	display: flex;
+	justify-content: space-between;
 }
 
 .main-footer .footer-bottom .copyright{

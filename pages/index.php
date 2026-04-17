@@ -10,10 +10,10 @@ include __DIR__ . '/../partials/header.php';
 ?>
 	
 	<!-- Main Slider -->
-	<section class="slider-two">
+	<section id="home" class="slider-two">
 		<div class="single-item-carousel owl-carousel owl-theme">
 
-		<!-- Slide -->
+			<!-- Slide -->
 			<div class="slide">
 				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-ia.webp)"></div>
 				<div class="slider-two_pattern-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/pattern-1.png)"></div>
@@ -30,11 +30,6 @@ include __DIR__ . '/../partials/header.php';
 							</div>
 							<!-- Button Box -->
 							<div class="slider-two_button-box">
-								<?php
-								// $wa_number = "5491160572691";
-								// $wa_text = WA_IA;
-								// $wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
-								?>
 								<a class="btn-style-two theme-btn btn-item" href="<?= $base_url ?>/servicios/ia/" target="_blank" rel="noopener">
 									<div class="btn-wrap">
 										<span class="text-one">Conocé más <i class="fa-solid fa-arrow-right fa-fw"></i></span>
@@ -57,7 +52,7 @@ include __DIR__ . '/../partials/header.php';
 					<!-- Content Column -->
 					<div class="slider-two-content">
 						<div class="slider-two_inner">
-							<div class="slider-two_title">Tecnología aplicada a negocios reales</div>
+							<div class="slider-two_title">Tecnología aplicada a negocios</div>
 							<h1 class="slider-two_heading">Tecnología que ordena tu operación y acelera tus ventas</h1>
 							<div class="slider-two_text">
 									Automatizamos procesos, integramos herramientas y construimos software a medida para que tu PyME o Startup 
@@ -77,10 +72,40 @@ include __DIR__ . '/../partials/header.php';
 					
 				</div>
 			</div>
+
+			<!-- Slide -->
+			<div class="slide">
+				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-content.webp)"></div>
+				<div class="slider-two_pattern-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/pattern-1.png)"></div>
+				<div class="auto-container">
+					
+					<!-- Content Column -->
+					<div class="slider-two-content">
+						<div class="slider-two_inner">
+							<div class="slider-two_title">Content Factory</div>
+							<h1 class="slider-two_heading">Creá anuncios en video que escalan tu adquisición</h1>
+							<div class="slider-two_text">
+								Producimos videos con modelos generados con IA, listos para campañas en redes. Más variantes, menor costo 
+								y mejores resultados a medida que optimizás tus campañas.
+							</div>
+							<!-- Button Box -->
+							<div class="slider-two_button-box">
+								<a class="btn-style-two theme-btn btn-item" href="<?= $base_url ?>/servicios/content/" target="_blank" rel="noopener">
+									<div class="btn-wrap">
+										<span class="text-one">Ver ejemplos <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										<span class="text-two">Ver ejemplos <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
 			
 			<!-- Slide -->
 			<div class="slide">
-				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-marketing.jpeg)"></div>
+				<div class="slider-two_image-layer" style="background-image:url(<?= $base_url ?>/images/img-pymento/hero-marketing.webp)"></div>
 				<div class="slider-two_pattern-layer" style="background-image:url(<?= $base_url ?>/images/main-slider/pattern-1.png)"></div>
 				<div class="auto-container">
 					
@@ -88,7 +113,7 @@ include __DIR__ . '/../partials/header.php';
 					<div class="slider-two-content">
 						<div class="slider-two_inner">
 							<div class="slider-two_title">Marketing y Adquisicion</div>
-							<h1 class="slider-two_heading">Adquisición con medición</h1>
+							<h1 class="slider-two_heading">Adquisición de clientes con medición</h1>
 							<div class="slider-two_text">
 								Definimos propuesta de valor, canales y embudo. Ejecutamos campañas y optimizamos semanalmente con métricas claras para que cada peso invertido genere demanda.
 							</div>
@@ -194,10 +219,10 @@ include __DIR__ . '/../partials/header.php';
 				<div class="clients-one_carousel-column col-lg-8 col-md-12 col-sm-12">
 					<!-- Sponsors Carousel -->
 					<ul class="sponsors-carousel-two owl-carousel owl-theme">
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-plusrasgo.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-cooperativa.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-ahorrointeligente.png" alt=""></a></figure></li>
-						<li class="slide-item"><figure class="client-one_image-box client-logo-small"><a href="#"><img src="<?= $base_url ?>/images/img-pymento/logo-SNZ-bg.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box"><img src="<?= $base_url ?>/images/img-pymento/logo-plusrasgo.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box"><img src="<?= $base_url ?>/images/img-pymento/logo-cooperativa.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box"><img src="<?= $base_url ?>/images/img-pymento/logo-ahorrointeligente.png" alt=""></a></figure></li>
+						<li class="slide-item"><figure class="client-one_image-box client-logo-small"><img src="<?= $base_url ?>/images/img-pymento/logo-SNZ-bg.png" alt=""></a></figure></li>
 					</ul>
 				</div>
 			</div>
@@ -223,7 +248,7 @@ include __DIR__ . '/../partials/header.php';
 					<div class="about-two_content-inner">
 						<div class="sec-title_two">
 							<div class="sec-title_two-title">Sobre Nosotros</div>
-							<h2 class="sec-title_two-heading">Soluciones <span>reales</span> para negocios <span>reales</span></h2>
+							<h2 class="sec-title_two-heading">Soluciones para <span>TU</span> negocio </h2>
 						</div>
 						<div class="about-two_text">
 							En PyMENTO ayudamos a PyMEs y startups a convertir ideas en resultados. Combinamos desarrollo, automatización y 
@@ -264,8 +289,8 @@ include __DIR__ . '/../partials/header.php';
 							?>
 							<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 								<div class="btn-wrap">
-									<span class="text-one">Hablemos de tu proyecto <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									<span class="text-two">Hablemos de tu proyecto <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+									<span class="text-one">Contactarme <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+									<span class="text-two">Contactarme <i class="fa-solid fa-arrow-right fa-fw"></i></span>
 								</div>
 							</a>							
 						</div>
@@ -279,7 +304,7 @@ include __DIR__ . '/../partials/header.php';
 	<!-- End About Two -->
 
 	<!-- Services -->
-	<section class="services-one" id="servicios">
+	<section id="servicios" class="services-one">
 		<div class="services-one_pattern-layer" style="background-image:url(<?= $base_url ?>/images/background/pattern-14.png)"></div>
 		<div class="auto-container">
 
@@ -420,116 +445,139 @@ include __DIR__ . '/../partials/header.php';
 	<!-- End Services -->
 
 	<!-- Testimonial Section -->
-	<section id="testimonial" class="testimonial-section" style="background-image: url(<?= $base_url ?>/images/img-pymento/testimonial-bg.webp)">
+	<!-- <section id="testimonial" class="testimonial-section" style="background-image: url(<?= $base_url ?>/images/img-pymento/testimonial-bg.webp)">
 		<div class="pattern-layer-one" style="background-image: url(<?= $base_url ?>/images/background/pattern-25.png)"></div>
 		<div class="auto-container">
-			<div class="row clearfix">
+			<div class="row clearfix"> -->
 
 				<!-- Title Column -->
-				<div class="title-column col-lg-5 col-md-12 col-sm-12">
+				<!-- <div class="title-column col-lg-5 col-md-12 col-sm-12">
 					<div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<!-- Sec Title -->
 						<div class="sec-title_two">
 							<div class="sec-title_two-title">Testimonios</div>
 							<h2 class="sec-title_two-heading">Lo que dicen quienes <br> <span>trabajaron con nosotros</span></h2>
 							<div class="sec-title_two-text">
 								Nos enfocamos en resultados: orden, eficiencia y crecimiento. Estos son algunos comentarios
-								de clientes con los que implementamos mejoras reales en sus procesos y su presencia digital.
+								de clientes con los que implementamos mejoras en sus procesos y su presencia digital.
 							</div>
 						</div>
-						<!-- (Botón eliminado) -->
 					</div>
-				</div>
+				</div> -->
 
 				<!-- Carousel Column -->
-				<div class="carousel-column col-lg-7 col-md-12 col-sm-12">
+				<!-- <div class="carousel-column col-lg-7 col-md-12 col-sm-12">
 					<div class="inner-column" style="background-image: url(<?= $base_url ?>/images/background/pattern-26.png)">
 						<div class="authors-outer">
 							<div class="author-one">
-								<img src="<?= $base_url ?>/images/img-pymento/testimonio-1.webp" alt="" />
+								<img src="<?= $base_url ?>/images/img-pymento/logotipo-cooperativa.png" alt="" />
 							</div>
 							<div class="author-two">
-								<img src="<?= $base_url ?>/images/img-pymento/testimonio-4.webp" alt="" />
+								<img src="<?= $base_url ?>/images/img-pymento/logo-ahorrointeligente.png" alt="" />
 							</div>
 							<div class="author-three">
-								<img src="<?= $base_url ?>/images/img-pymento/testimonio-3.webp" alt="" />
+								<img src="<?= $base_url ?>/images/img-pymento/logo-snz.png" alt="" />
 							</div>
 							<div class="author-four">
-								<img src="<?= $base_url ?>/images/img-pymento/testimonio-2.webp" alt="" />
+								<img src="<?= $base_url ?>/images/img-pymento/logotipo-plusrasgo.png" alt="" />
 							</div>
 						</div>
 
-						<div class="single-item-carousel owl-carousel owl-theme">
+						<div class="single-item-carousel owl-carousel owl-theme"> -->
 
 							<!-- Testimonial Block -->
-							<div class="testimonial-block">
+							<!-- <div class="testimonial-block">
 								<div class="inner-box">
-									<div class="rating">
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
-									<div class="text">“Necesitábamos ordenar procesos y automatizar tareas repetitivas. Pymento entendió rápido el negocio, propuso mejoras y lo implementó sin vueltas. Hoy trabajamos más rápido y con menos errores.”</div>
-								</div>
-								<div class="author-box">
-									<div class="box-inner">
-										<span class="author-image">
-											<img src="<?= $base_url ?>/images/img-pymento/testimonio-1.webp" alt="" />
-										</span>
-										<h5>Mariana G.</h5>
-										<div class="designation">Operaciones · PyME</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Testimonial Block -->
-							<div class="testimonial-block">
-								<div class="inner-box">
-									<div class="rating">
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-									</div>
 									<div class="text">
-										“Ordenamos procesos y automatizamos tareas repetitivas.
-										PyMENTO entendió rápido el negocio, propuso mejoras y las implementó por etapas. 
-										Hoy trabajamos más rápido y con menos errores.”
+										“Pasamos de manejar solicitudes de forma manual a tener un sistema completo con login de usuarios, carga de documentación y panel administrativo.
+										Antes el proceso era manual y desordenado. Hoy tenemos todo centralizado, con seguimiento claro de cada solicitud."
 									</div>
 								</div>
 								<div class="author-box">
 									<div class="box-inner">
 										<span class="author-image">
-											<img src="<?= $base_url ?>/images/img-pymento/testimonio-4.webp" alt="" />
+											<img src="<?= $base_url ?>/images/img-pymento/logotipo-plusrasgo.png" alt="" />
 										</span>
-										<h5>Lucas R.</h5>
-										<div class="designation">Founder · Startup</div>
-									</div>
+										<div class="author-info">
+											<h5>Plusrasgo</h5>
+											<div class="designation">
+												<a href="https://plusrasgo.com.ar/" target="_blank">
+													plusrasgo.com.ar
+												</a>
+											</div>
+										</div>
+										<div class="rating">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+									</div>									
 								</div>
-							</div>
+							</div> -->
 
 							<!-- Testimonial Block -->
-							<div class="testimonial-block">
+							<!-- <div class="testimonial-block">
 								<div class="inner-box">
-									<div class="rating">
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
-										<span class="fa fa-star"></span>
+									<div class="text">
+										“Necesitábamos rediseñar todo nuestro sitio web y tener una mejor manera de convertir. Pymento entendió rápido el negocio, 
+										propuso mejoras y lo implementó de forma ordenada. Hoy trabajamos más rápido y con menos errores.”
 									</div>
-									<div class="text">“Implementamos automatizaciones e integraciones que nos liberaron horas por semana. Entregaron rápido, documentaron y quedaron disponibles para ajustes. Se nota el enfoque profesional.”</div>
 								</div>
 								<div class="author-box">
 									<div class="box-inner">
 										<span class="author-image">
-											<img src="<?= $base_url ?>/images/img-pymento/testimonio-3.webp" alt="" />
+											<img src="<?= $base_url ?>/images/img-pymento/logotipo-cooperativa.png" alt="" />
 										</span>
-										<h5>Sofía P.</h5>
-										<div class="designation">Administración · Servicios</div>
+										<div class="author-info">
+											<h5>Cooperativa 2001</h5>
+											<div class="designation">
+												<a href="https://cooperativa2001.com.ar/" target="_blank">
+													cooperativa2001.com.ar
+												</a>
+											</div>
+										</div>
+										
+										<div class="rating">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
+
+									</div>
+								</div>
+							</div> -->
+
+							<!-- Testimonial Block -->
+							<!-- <div class="testimonial-block">
+								<div class="inner-box">
+									<div class="text">
+										“Implementamos automatizaciones e integraciones que nos liberaron horas por semana. 
+										Entregaron rápido, documentaron y quedaron disponibles para ajustes. Se nota el enfoque profesional.”
+									</div>
+								</div>
+								<div class="author-box">
+									<div class="box-inner">
+										<span class="author-image">
+											<img src="<?= $base_url ?>/images/img-pymento/logo-ahorrointeligente.png" alt="" />
+										</span>
+										<div class="author-info">
+											<h5>Ahorro Inteligente</h5>
+											<div class="designation">
+												<a href="https://ahorrointeligente.com.ar/" target="_blank">
+													ahorrointeligente.com.ar
+												</a>
+											</div>
+										</div>
+										<div class="rating">
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -540,11 +588,11 @@ include __DIR__ . '/../partials/header.php';
 
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- End Testimonial Section -->
 
 	<!-- CTA One -->
-	<section class="cta-one">
+	<!-- <section class="cta-one">
 		<div class="auto-container">
 			<div class="d-flex justify-content-between align-items-center flex-wrap">
 
@@ -566,7 +614,7 @@ include __DIR__ . '/../partials/header.php';
 
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- End CTA One -->
 
 <?php 

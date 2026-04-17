@@ -10,7 +10,7 @@
 					<div class="footer-column col-lg-4 col-md-6 col-sm-12">
 						<div class="footer-widget logo-widget">
 							<div class="logo">
-								<a href="index.html">
+								<a href="<?= $base_url ?>/">
 									<img src="<?= $base_url ?>/images/img-pymento/logo.png" alt="Pymento" />
 								</a>
 							</div>
@@ -18,27 +18,25 @@
 							<div class="text">
 								Soluciones tecnológicas para PyMES y Startups.
 								Software, automatización y estrategia digital para crecer con orden.
-							</div>
-
-							<?php
-							$wa_number = "5491160572691";
-							$wa_text = WA_GENERIC_TEXT;
-							$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
-							?>
-							<a class="theme-btn about-btn"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
-								Contactarme
-							</a>
+							</div>							
 						</div>
 					</div>
 
-					<!-- Column 2 - Navegación -->
+					<!-- Column 2 - Links -->
+					<?php
+						$is_home = ($nav_variant === "home");
+
+						$home_link = $is_home ? "#home" : ($base_url . "/");
+						$services_link = $is_home ? "#servicios" : ($base_url . "/#servicios");
+						$about_link = $is_home ? "#about" : ($base_url . "/#about");
+					?>
 					<div class="footer-column col-lg-4 col-md-6 col-sm-12">
 						<div class="footer-widget links-widget">
-							<h4>Navegación</h4>
+							<h4>Links</h4>
 							<ul class="contact-list">
-								<li><a href="index.html">Inicio</a></li>
-								<li><a href="#servicios">Servicios</a></li>
-								<li><a href="about.html">Nosotros</a></li>
+								<li><a href="<?= $home_link ?>">Inicio</a></li>
+								<li><a href="<?= $services_link ?>">Servicios</a></li>
+								<li><a href="<?= $about_link ?>">Nosotros</a></li>
 							</ul>
 						</div>
 					</div>
@@ -51,18 +49,29 @@
 							<ul class="contact-list">
 								<li>
 									<span class="icon fa fa-envelope"></span>
-									comercial@pymento.com.ar
+										comercial@pymento.com.ar 
+										<br>
+										Respondemos dentro de 24hs hábiles
 								</li>
 								<li>
 									<span class="icon fa fa-phone"></span>
-									WhatsApp / Consulta directa
+									WhatsApp / Consulta directa:									
+								</li>
+								<li>
+									<?php
+									$wa_number = "5491160572691";
+									$wa_text = WA_GENERIC_TEXT;
+									$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
+									?>
+									<a class="theme-btn about-btn"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
+										Contactarme
+									</a>
+								</li>
+								<li>
+									<span class="icon fa fa-map-marker-alt"></span>
+									Buenos Aires, Argentina
 								</li>
 							</ul>
-
-							<div class="timing">
-								<strong>Modalidad:</strong><br>
-								Trabajo remoto · Argentina / LATAM
-							</div>
 						</div>
 					</div>
 
@@ -72,7 +81,16 @@
 			<!-- Footer Bottom -->
 			<div class="footer-bottom">
 				<div class="copyright">
-					© 2026 Pymento — Soluciones tecnológicas para negocios.
+					© 2026 Pymento — Todos los derechos reservados.
+				</div>
+
+				<div class="footer-legal">
+					<a href="<? $base_url ?>/pages/privacy-policy.php">
+						Politicas de privacidad
+					</a>
+					<a href="<? $base_url ?>/pages/terms-of-service.php">
+						Términos del Servicio
+					</a>
 				</div>
 			</div>
 
@@ -98,7 +116,7 @@
 <!-- End PageWrapper -->
 
 <!-- Scroll To Top -->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
+<!-- <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div> -->
 
 <script src="<?= $base_url ?>/js/jquery.js"></script>
 <script src="<?= $base_url ?>/js/appear.js"></script>

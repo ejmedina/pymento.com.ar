@@ -52,17 +52,53 @@ li,
 /* INDEX
     ======================= */
 
+/* NAVBAR */
+
+
+/* ---- */
+
 /* Hero slider */
 .slider-two .slide{
-    position: relative !important;
+    position: relative !important; /* definimos contenedor para el psoition: absolute */
     padding: 80px 0px 220px !important;
 }
 
 /* Activamos el gradiente vertical en el fondo del logo */
 .header-style-two .logo:before {
-    background-image: var(--color-gradient) !important;}
+    background-image: var(--color-gradient) !important;
+}
 
+/* Fondo en los sliders mas oscuro para que se lean mas los textos */
+/* Overlay oscuro */
+.slider-two .slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
+    background: rgba(0, 0, 0, 0.6); 
+    
+    z-index: 1;
+}
+
+.slider-two .slider-two-content {
+    position: relative;
+    z-index: 2;
+}
+
+.slider-two .owl-stage-outer {
+    overflow: hidden;
+}
+
+.slider-two .slide {
+    overflow: hidden;
+}
+
+.slider-two_image-layer {
+    transition: transform 10s ease;
+}
 
 /* HERO SLIDER (slider-two) - Mobile: ocultar flechas, mostrar dots */
 @media (max-width: 767px) {
@@ -182,11 +218,91 @@ li,
     transform: scale(1.2) translateY(-8px);
 }
 
+/* SECCION: Nuestros Servicios */
+.services-one .owl-dots {
+    display: none !important;
+}
+
+.services-one .owl-nav {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+@media (min-width: 992px) {
+
+    .services-one .four-item-carousel {
+        position: relative;
+        padding: 0 60px;        
+    }
+
+    .services-one .owl-nav {
+        position: absolute;
+        top: 65%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        justify-content: space-between;
+        margin-top: 0;
+    }
+
+    .services-one .owl-nav button {
+        position: relative;
+        z-index: 2;
+    }
+
+}
 
 
 /* TESTIMONIAL */
+
+/* Seccion de logos flotantes */
+.author-two {
+    width: 160px !important;
+    overflow: visible !important;
+}
+
+.author-four {
+    overflow: visible !important;
+}
+
+.author-image {
+    display: flex;
+    margin-right: 10px;
+}
+
+.author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Seccion de las citas */
 .testimonial-section {
     background-size: contain;
+}
+
+.testimonial-section .carousel-column .inner-column {
+    padding: 15px 45px;
+}
+
+.box-inner {
+    display: flex;
+    align-items: center;
+}
+
+/* texto en columna */
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* estrellas a la derecha */
+.rating {
+    white-space: nowrap;
+    margin-left: 100px;
 }
 
 /* alinear author-box siempre abajo */
@@ -207,7 +323,38 @@ li,
 
 /* Imagen de fondo HERO */
 .page-title {
-    background-position: center 40%;
+    background-position: center 40% !important;
+    padding: 50px !important;
+
+}
+
+.service-detail p {
+    margin-top: 20px !important;
+}
+
+/* CONTENIDO DE TEXTOS */
+.service-bullets {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-bullets li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.service-bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--main-color);
 }
 
 /* Sidebar con colores y gradiente */
@@ -221,6 +368,7 @@ li,
     border-color: var(--main-color);
 }
 
+/* CONTACT WIDGET */
 .contact-widget .help {
     line-height: 1.1;
 }
@@ -241,27 +389,88 @@ li,
     content: none !important;
 }
 
-.contact-widget .button-box .fa-brands {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 55px;
-    height: 51px;
-    line-height: 51px;
-    font-size: 30px;
-    color: var(--white-color);
-    background: linear-gradient(to left, var(--color-sixtyeight) 0%, var(--color-sixtyseven) 100%);
+.contact-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 20px;
 }
 
-/* transición suave */
-.contact-widget .button-box .fa-whatsapp{
-    transition: transform 0.2s ease;
+.contact-link {
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
 }
 
-/* agrandar cuando el mouse está sobre el botón */
-.contact-widget .button-box a:hover .fa-whatsapp{
-    font-size: 40px;
-    background: linear-gradient(to left, #25D366 0%, #128C7E 100%);
+.contact-separator {
+    color: #999;
+}
+
+/* Icono WA */
+.whatsapp-link {
+    color: #25D366;
+    transition: transform 0.3s ease;
+}
+.whatsapp-link:hover {
+    color: #5bff97;
+    transform: scale(1.2);
+}
+
+/* Email */
+.email-contact {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.email-contact span {
+    color: var(--main-color);
+}
+
+.email-toggle,
+.copy-email {
+    cursor: pointer;
+    color: var(--main-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.email-toggle:hover,
+.copy-email:hover {
+    text-decoration: underline;
+}
+
+.email-value {
+    font-weight: 500;
+}
+
+.copy-feedback {
+    display: block;
+    margin-top: 10px;
+
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;           
+    font-size: 18px;         
+    font-weight: 600;
+    text-transform: uppercase;
+
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.copy-feedback.show {
+    opacity: 1;
 }
 
 /* Seccion de tarjetas negra scon misma altura */
@@ -280,6 +489,23 @@ li,
     width: 100%;
     height: 100%;
 }
+
+/* 4) Corregir color del fondo, color de textos, bordes */
+.service-detail .feature-two_inner,
+.service-detail .feature-three_icon {
+    background-color: rgb(211, 211, 211);
+}
+
+.service-detail .feature-two_inner {
+    border-radius: 30px;
+    padding: 25px;
+}
+
+.feature-two_heading,
+.feature-two_text {
+    color: #000;
+}
+
 
 /* SECCION CONTENT FACTORY 
     ==================== */
@@ -625,4 +851,9 @@ li,
 .main-footer .logo img{
     max-width: 200px;
     height: auto;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
 }
