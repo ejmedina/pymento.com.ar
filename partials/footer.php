@@ -1,4 +1,5 @@
-    <!-- Footer -->
+	<?php /** @var string $base_url */ ?>
+	<!-- Footer -->
 	<footer class="main-footer" style="background-image:url(<?= $base_url ?>/images/background/pattern-11.png)">
 		<div class="auto-container">
 
@@ -64,7 +65,7 @@
 									$wa_url  = "https://wa.me/{$wa_number}?text=" . rawurlencode($wa_text);
 									?>
 									<a class="theme-btn about-btn"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
-										Contactarme
+										Contáctanos
 									</a>
 								</li>
 								<li>

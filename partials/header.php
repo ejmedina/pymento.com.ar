@@ -1,3 +1,5 @@
+<?php /** @var string $base_url */ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -102,8 +104,8 @@
 									?>
 									<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 										<div class="btn-wrap">
-											<span class="text-one">Contactarme<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-											<span class="text-two">Contactarme<i class="fa-solid fa-arrow-right fa-fw"></i></span>
+											<span class="text-one">Contáctanos<i class="fa-solid fa-arrow-right fa-fw"></i></span>
+											<span class="text-two">Contáctanos<i class="fa-solid fa-arrow-right fa-fw"></i></span>
 										</div>
 									</a>
 								</div>
@@ -152,8 +154,8 @@
 								?>
 								<a class="btn-style-three theme-btn btn-item"  href="<?= htmlspecialchars($wa_url) ?>" target="_blank" rel="noopener">
 									<div class="btn-wrap">
-										<span class="text-one">Contactarme<i class="fa-solid fa-arrow-right fa-fw"></i></span>
-										<span class="text-two">Contactarme<i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										<span class="text-one">Contáctanos<i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										<span class="text-two">Contáctanos<i class="fa-solid fa-arrow-right fa-fw"></i></span>
 									</div>
 								</a>
 							</div>
