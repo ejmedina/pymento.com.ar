@@ -16,12 +16,12 @@ $services = [
 		],
 		"feature_twos" => [
 		[
-			"icon" => $base_url . "/images/icons/feature-6.png",
+			"icon" => $base_url . "/images/icons/feature-6-white.png",
 			"heading" => "Estrategia y canal correcto",
 			"text" => "Propuesta de valor + mensajes + plan de canales."
 		],
 		[
-			"icon" => $base_url . "/images/icons/service-21.png",
+			"icon" => $base_url . "/images/icons/service-21-white.png",
 			"heading" => "Medición y optimización semanal",
 			"text" => "Setup de tracking + A/B tests + mejoras continuas para convertir más."
 		],
@@ -32,9 +32,9 @@ $services = [
 		"text" => "Planificamos, ejecutamos y ajustamos con métricas claras para que la inversión se traduzca en resultados."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-3.png", "text" => "Tracking\nrápido"],
-		["icon" => $base_url . "/images/icons/service-2.png", "text" => "Tests\nclaros"],
-		["icon" => $base_url . "/images/icons/counter-3.png", "text" => "Resultados\nconstantes"],
+		["icon" => $base_url . "/images/icons/service-3-white.png", "text" => "Tracking\nrápido"],
+		["icon" => $base_url . "/images/icons/service-2-white.png", "text" => "Tests\nclaros"],
+		["icon" => $base_url . "/images/icons/service-9.png", "text" => "Resultados\nconstantes"],
 		],
 	],
 
@@ -51,12 +51,12 @@ $services = [
 		],
 		"feature_twos" => [
 		[
-			"icon" => $base_url . "/images/icons/feature-6.png",
+			"icon" => $base_url . "/images/icons/feature-6-white.png",
 			"heading" => "Mapa de procesos + foco",
 			"text" => "Identificamos cuellos de botella y definimos prioridades sin dispersión."
 		],
 		[
-			"icon" => $base_url . "/images/icons/service-18.2.png",
+			"icon" => $base_url . "/images/icons/service-16-resize.png",
 			"heading" => "Roadmap accionable",
 			"text" => "Plan por etapas con objetivos, tiempos y métricas para ejecutar."
 		],
@@ -67,9 +67,9 @@ $services = [
 		"text" => "Definimos indicadores clave y armamos un tablero simple para decidir con datos y mejorar con continuidad."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-35.png", "text" => "Impactos\nordenados"],
-		["icon" => $base_url . "/images/icons/service-3.png", "text" => "Objetivos\nmedibles"],
-		["icon" => $base_url . "/images/icons/service-6.png", "text" => "Acompañamiento\ncercano"],
+		["icon" => $base_url . "/images/icons/service-35-white.png", "text" => "Impactos\nordenados"],
+		["icon" => $base_url . "/images/icons/service-3-white.png", "text" => "Objetivos\nmedibles"],
+		["icon" => $base_url . "/images/icons/service-6-white.png", "text" => "Acompañamiento\ncercano"],
 		],
 	],
 
@@ -86,12 +86,12 @@ $services = [
 		],
 		"feature_twos" => [
 		[
-			"icon" => $base_url . "/images/icons/service-19.2.png",
+			"icon" => $base_url . "/images/icons/service-13-white.png",
 			"heading" => "A medida y escalable",
 			"text" => "Arquitectura modular para crecer sin rehacer todo desde cero."
 		],
 		[
-			"icon" => $base_url . "/images/icons/service-18.2.png",
+			"icon" => $base_url . "/images/icons/service-16-resize.png",
 			"heading" => "Integraciones reales",
 			"text" => "APIs y automatizaciones con CRM, WhatsApp, email, pagos y más."
 		],
@@ -102,9 +102,9 @@ $services = [
 		"text" => "Prototipamos rápido, validamos con vos y llevamos a producción con documentación y soporte."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-33.png", "text" => "Automatización\nde tareas"],
-		["icon" => $base_url . "/images/icons/service-32.png", "text" => "Integración\ncon sistemas"],
-		["icon" => $base_url . "/images/icons/service-3.png", "text" => "Documentación\ny soporte"],
+		["icon" => $base_url . "/images/icons/service-33-white.png", "text" => "Automatización\nde tareas"],
+		["icon" => $base_url . "/images/icons/service-32-white.png", "text" => "Integración\ncon sistemas"],
+		["icon" => $base_url . "/images/icons/service-3-white.png", "text" => "Documentación\ny soporte"],
 		],
 	],
 
@@ -121,12 +121,12 @@ $services = [
 		],
 		"feature_twos" => [
 		[
-			"icon" => $base_url . "/images/icons/feature-6.png",
+			"icon" => $base_url . "/images/icons/feature-6-white.png",
 			"heading" => "Atención 24/7 con derivación",
 			"text" => "Respuestas consistentes, derivación inteligente y seguimiento post-consulta."
 		],
 		[
-			"icon" => $base_url . "/images/icons/feature-7.png",
+			"icon" => $base_url . "/images/icons/feature-7-white.png",
 			"heading" => "Ventas asistidas",
 			"text" => "Califica leads, responde objeciones y mejora la experiencia hasta el cierre."
 		],
@@ -137,9 +137,9 @@ $services = [
 		"text" => "Definimos límites, aprobaciones y métricas para que la IA sume sin sorpresas."
 		],
 		"feature_threes" => [
-		["icon" => $base_url . "/images/icons/service-11-1.png", "text" => "FAQ +\nderivación"],
-		["icon" => $base_url . "/images/icons/service-32.png", "text" => "Leads\ncalificados"],
-		["icon" => $base_url . "/images/icons/service-10-1.png", "text" => "Resumen +\nCRM"],
+		["icon" => $base_url . "/images/icons/service-11.png", "text" => "FAQ +\nderivación"],
+		["icon" => $base_url . "/images/icons/service-32-white.png", "text" => "Leads\ncalificados"],
+		["icon" => $base_url . "/images/icons/service-10.png", "text" => "Resumen +\nCRM"],
 		],
 	],
 
@@ -181,12 +181,12 @@ $services = [
 ];
 
 $video_files = [
-	['yt' => 'qFtI8OXGoaA', 'poster' => 'video-poster-1.webp', 'client' => 'Autoelevadores DG', 'desc' => 'Campaña de adquisición de clientes'],
-	['yt' => 'ZEubnhnv_GM', 'poster' => 'video-poster-2.jpg', 'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
-	['yt' => '-pCiJTNb4kI', 'poster' => 'video-poster-3.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
-	['yt' => 'gNoGu_P7qwg', 'poster' => 'video-poster-4.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
-	['yt' => 'mKyJitK2drg', 'poster' => 'video-poster-5.webp',  'client' => 'PGI Argentina', 'desc' => 'Campaña de adquisición de clientes'],
-	['yt' => 'ZsbQKMs0wo4', 'poster' => 'video-poster-6.webp',  'client' => 'Ahorro Inteligente', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'zUiZgk3ivP8', 'poster' => 'video-poster-1.webp', 'client' => 'Autoelevadores DG', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => '7xN7VzMAjNA', 'poster' => 'video-poster-2.jpg', 'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'WTCOT6X6ARY', 'poster' => 'video-poster-3.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'UjmuHp6A-tk', 'poster' => 'video-poster-4.webp',  'client' => 'Cooperativa 2001', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'qcJOQ4CC61Y', 'poster' => 'video-poster-5.webp',  'client' => 'PGI Argentina', 'desc' => 'Campaña de adquisición de clientes'],
+	['yt' => 'AoCs2ik6BLs', 'poster' => 'video-poster-6.webp',  'client' => 'Ahorro Inteligente', 'desc' => 'Campaña de adquisición de clientes'],
 ];
 
 $content_videos = array_map(function($v) use ($base_url) {
@@ -370,37 +370,73 @@ include __DIR__ . '/../partials/header.php';
 										<h4 class="content-works-pill">Trabajos realizados a nuestros clientes</h4>
 									</div>
 
+									<!-- Botones switch para cambiar casos -->
+									<div class="content-switch">
+											<button class="content-tab active" data-target="pymes">PyMES</button>
+											<button class="content-tab" data-target="creators">Content Creators</button>
+									</div>
+
 									<!-- Slider videos estilo teléfono -->
+									<!-- WRAPPER GENERAL -->
 									<div class="content-video-slider-wrapper">
-										<div class="content-video-slider owl-carousel owl-theme">
-											<?php foreach ($content_videos as $i => $v): ?>
-												<div class="content-video-slide" data-pos="<?= (int)$i ?>">
-												
-													<div class="phone">
-														<div class="phone__screen" style="background-image:url('<?= htmlspecialchars($v['poster'] ?? '') ?>')">
-															<div
-																class="phone__player"
-																data-yt-id="<?= htmlspecialchars($v['yt']) ?>"
-																aria-label="Video YouTube"
-															></div>
+										
+										<!-- SLIDER PYMES -->
+										<div class="content-slider content-slider-pymes active">
+											<div class="content-video-slider owl-carousel owl-theme">
+												<?php foreach ($content_videos as $i => $v): ?>
+													<div class="content-video-slide" data-pos="<?= (int)$i ?>">
+													
+														<div class="phone">
+															<div class="phone__screen" style="background-image:url('<?= htmlspecialchars($v['poster'] ?? '') ?>')">
+																<div
+																	class="phone__player"
+																	data-yt-id="<?= htmlspecialchars($v['yt']) ?>"
+																	aria-label="Video YouTube"
+																></div>
+															</div>
+
+															<!-- overlay play (solo hasta que se cree el iframe) -->
+															<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
+																<span class="phone__play"></span>
+															</button>
 														</div>
 
-														<!-- overlay play (solo hasta que se cree el iframe) -->
-														<button class="phone__tap" type="button" aria-label="Reproducir/Pausar">
-															<span class="phone__play"></span>
-														</button>
+														<?php if (!empty($v['client'])): ?>
+															<div class="video-client">Cliente: <?= htmlspecialchars($v['client']) ?></div>
+														<?php endif; ?>
+
+														<?php if (!empty($v['desc'])): ?>
+															<div class="video-desc"><?= htmlspecialchars($v['desc']) ?></div>
+														<?php endif; ?>
+
 													</div>
+												<?php endforeach; ?>
+											</div>
+										</div>
 
-													<?php if (!empty($v['client'])): ?>
-														<div class="video-client">Cliente: <?= htmlspecialchars($v['client']) ?></div>
-													<?php endif; ?>
+										<!-- SLIDER CONTENT CREATORS -->
+										<div class="content-slider content-slider-creators">
+												<div class="content-creators-slider owl-carousel owl-theme">
+														<!-- ITEM -->
+														<div class="creator-slide">
+															<div class="creator-video" data-yt-id="HgukwsCBgNA">
+																<img 
+																		src="<?= $base_url ?>/images/img-pymento/fabriuruguayo-video-thumbnail.jpg" 
+																		alt="Video"
+																		class="creator-thumb"
+																>
+																	<button class="creator-play">
+																		<span class="fa-solid fa-play"></span>
+																	</button>
 
-													<?php if (!empty($v['desc'])): ?>
-														<div class="video-desc"><?= htmlspecialchars($v['desc']) ?></div>
-													<?php endif; ?>
+															</div>
 
+															<div class="creator-info">
+																	<div class="creator-name">@Fabriuruguayo</div>
+																	<div class="creator-desc">Introducción para stream</div>
+															</div>
+														</div>
 												</div>
-											<?php endforeach; ?>
 										</div>
 									</div>
 								<?php endif; ?>

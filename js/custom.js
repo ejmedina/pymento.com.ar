@@ -139,61 +139,129 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const $slider = jQuery('.content-video-slider');
-    // evitar doble-init por si el script corre dos veces
-    if ($slider.hasClass('owl-loaded')) return;
+    // Seccion PyMES content factory
+    const pymesSlider = jQuery('.content-video-slider');
 
     // Inicializacion del owlCarousel
-    $slider.owlCarousel({
-        loop: true,
-        nav: false,
-        dots: true,
-        center: true,
-        responsive: {
-            0: {
-                items: 1,
-                margin: 14,
-                stagePadding: 0
-            },
-            768: {
-                items: 2,
-                margin: -200,
-                stagePadding: 0
+    // evitar doble-init por si el script corre dos veces
+    if (pymesSlider.length && !pymesSlider.hasClass('owl-loaded')) {
+        // INIT
+        pymesSlider.owlCarousel({
+            loop: true,
+            nav: false,
+            dots: true,
+            center: true,
+            responsive: {
+                0: { items: 1, margin: 14, stagePadding: 0 },
+                768: { items: 2, margin: -200, stagePadding: 0 }
             }
-        }
+        });
+
+         // EVENTOS
+        pymesSlider.on('drag.owl.carousel', function () {
+            // Marcar cuando el usuario está arrastrando el carrusel
+            CONTENT_SLIDER_DRAGGING = true;
+            // Pausamos todo apenas empieza a arrastrar
+            pauseAllPlayers(null);
+        });
+
+        // Cuando termina el drag, esperamos un tick para que no caiga el click fantasma
+        pymesSlider.on('dragged.owl.carousel', function () {
+            setTimeout(() => { CONTENT_SLIDER_DRAGGING = false; }, 0);
+        });
+
+        // 3) Click/tap en un slide => llevarlo al centro
+        pymesSlider.on('click', '.owl-item', function (e) {
+            // si clickeás en el item central, NO mover carrusel
+            if (jQuery(this).hasClass('center')) return;
+
+            // si clickeás en controles del video, NO mover carrusel
+            if (jQuery(e.target).closest('.phone__tap, iframe, .phone__player').length) return;
+
+
+            const pos = jQuery(this).find('.content-video-slide').data('pos');
+            if (pos === undefined) return;
+
+            pymesSlider.trigger('to.owl.carousel', [pos, 250, true]);
+        });
+
+        // 4) Cuando cambia de slide: pausar todo
+        pymesSlider.on('changed.owl.carousel', function () {
+            pauseAllPlayers(null);
+        });
+    }
+
+    // Seccion Content Creators CONTENT FACTORY
+    const creatorsSlider = jQuery('.content-creators-slider');
+
+    if (creatorsSlider.length && !creatorsSlider.hasClass('owl-loaded')) {
+        creatorsSlider.owlCarousel({
+            loop: false, // clave (evita duplicados)
+            nav: true,
+            dots: false,
+            margin: 20,
+            center: true,
+            responsive: {
+                0: { items: 1 },
+                1024: { items: 1 }
+            }
+        });
+    }
+
+    const creatorVideos = document.querySelectorAll(".creator-video");
+
+    creatorVideos.forEach(container => {
+        container.addEventListener("click", function () {
+
+            // evitar recrear iframe si ya existe
+            if (this.classList.contains("loaded")) return;
+
+            const videoId = this.dataset.ytId;
+
+            const iframe = document.createElement("iframe");
+            const embedUrl = "https://www.youtube.com/embed/HgukwsCBgNA?si=H0cshIkiBxBiKN4b";
+
+            iframe.setAttribute("src", embedUrl);
+            iframe.setAttribute("frameborder", "0");
+            iframe.setAttribute("allow", "accelerometer; encrypted-media; gyroscope; picture-in-picture");
+            iframe.setAttribute("allowfullscreen", "");
+
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+
+            // limpiar contenido (thumbnail + botón)
+            this.innerHTML = "";
+            this.appendChild(iframe);
+
+            this.classList.add("loaded");
+        });
+
+    });
+});
+
+// Separacion de contenido y botones en CONTENT FACTORY:
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tabs = document.querySelectorAll(".content-tab");
+    const sliders = document.querySelectorAll(".content-slider");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+
+            // tabs
+            tabs.forEach(t => t.classList.remove("active"));
+            this.classList.add("active");
+
+            // sliders
+            const target = this.dataset.target;
+
+            sliders.forEach(s => s.classList.remove("active"));
+
+            document.querySelector(`.content-slider-${target}`)
+                .classList.add("active");
+        });
     });
 
-    // Marcar cuando el usuario está arrastrando el carrusel
-    $slider.on('drag.owl.carousel', function () {
-        CONTENT_SLIDER_DRAGGING = true;
-
-        // Pausamos todo apenas empieza a arrastrar
-        pauseAllPlayers(null);
-    });
-
-    // Cuando termina el drag, esperamos un tick para que no caiga el click fantasma
-    $slider.on('dragged.owl.carousel', function () {
-        setTimeout(() => { CONTENT_SLIDER_DRAGGING = false; }, 0);
-    });
-
-    // 3) Click/tap en un slide => llevarlo al centro
-    $slider.on('click', '.owl-item', function (e) {
-        // si clickeás en el item central, NO mover carrusel
-        if (jQuery(this).hasClass('center')) return;
-
-        // si clickeás en controles del video, NO mover carrusel
-        if (jQuery(e.target).closest('.phone__tap, iframe, .phone__player').length) return;
-
-        const pos = jQuery(this).find('.content-video-slide').data('pos');
-        if (pos === undefined) return;
-
-        $slider.trigger('to.owl.carousel', [pos, 250, true]);
-    });
-
-    // 4) Cuando cambia de slide: pausar todo
-    $slider.on('changed.owl.carousel', function () {
-        pauseAllPlayers(null);
-    });
 });
 
 // Funcion para copiar mail en el portapapeles
